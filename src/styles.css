@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    padding-top: 100px; /* Ajusta este valor según la altura de tu navbar */
+    
+}
+main {
+    margin-bottom: 40px; /* Ajusta este valor según la separación que desees */
+}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #343a40; /* Color de fondo oscuro para el footer */
+    color: white; /* Color de texto blanco para el footer */
+    text-align: center;
+    padding: 15px 0; /* Espaciado interno del footer */
+}
