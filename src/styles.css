@@ -16,3 +16,9 @@ main {
     text-align: center;
     padding: 15px 0; /* Espaciado interno del footer */
 }
+
+#foot{
+    top: 21px;
+    color: red;
+    position: relative;
+}
