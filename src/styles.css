@@ -16,9 +16,24 @@ main {
     text-align: center;
     padding: 15px 0; /* Espaciado interno del footer */
 }
-
+/*POR QUE NO FUNCIONA?*/
 #foot{
     top: 21px;
     color: red;
     position: relative;
+}
+.myBtn{
+    transition: transform 600ms;
+}
+.myBtn:hover{
+    transform: scale(1.4);
+}
+a:hover{
+    text-decoration: wavy;
+}
+.logo{
+    transition: transform 600ms;
+}
+.logo:hover{
+    transform: scale(1.2);
 }
