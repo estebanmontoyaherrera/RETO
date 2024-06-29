@@ -1,12 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Tooltip } from 'bootstrap';
 
 @Component({
   selector: 'app-adminpanel',
-  standalone: true,
-  imports: [],
   templateUrl: './adminpanel.component.html',
-  styleUrl: './adminpanel.component.css'
+  styleUrls: ['./adminpanel.component.css']
 })
-export class AdminpanelComponent {
+export class AdminpanelComponent implements OnInit {
 
+  constructor() { }
+
+  ngOnInit(): void {
+    // Inicializa tooltips
+    const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    tooltipTriggerList.map((tooltipTriggerEl) => new Tooltip(tooltipTriggerEl));
+  }
 }
+

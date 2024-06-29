@@ -1,71 +1,73 @@
-<section >
+
+<section>
     <div class="container">
-        <br>
-      <h2 class="section-title text-center">Registro de Usuarios</h2>
-      <p class="text-center">Regístrate como persona natural o jurídica, proporcionando información detallada para acceder a nuestras herramientas de evaluación.</p>
-      
-      <div class="row">
+       <br>
+       <h2 class="section-title text-center">Registro de Usuarios</h2>
        
-        <div class="col-md-6">
-          <div class="card shadow-sm">
-            <div class="card-body">
-              <form>
-                
-                <div class="mb-3">
-                    <label for="tipoPersona" class="form-label">Tipo de persona</label>
-                    <select id="tipoPersona" class="form-select">
-                        <option value="Natural">Natural</option>
-                        <option value="Jurídica">Jurídica</option>
-                    </select>
+       <p class="text-center">Regístrate como persona natural o jurídica, proporcionando información detallada para acceder a nuestras herramientas de evaluación.</p>
+       
+       <div class="row">
+          <div class="col-md-6">
+             <div class="card shadow-sm">
+                <div class="card-body">
+                   <form>
+                      <div class="mb-3">
+                         <label for="tipoPersona" class="form-label">Tipo de persona</label>
+                         <select id="tipoPersona" class="form-select">
+                            <option value="Natural">Natural</option>
+                            <option value="Jurídica">Jurídica</option>
+                         </select>
+                      </div>
+                      <div class="mb-3">
+                         <label for="nombre" class="form-label">Nombre</label>
+                         <input type="text" id="nombre" class="form-control">
+                      </div>
+                      <div class="mb-3">
+                         <label for="tipoEmpresa" class="form-label">Tipo de empresa</label>
+                         <select id="tipoEmpresa" class="form-select">
+                            <option value="Pequeña">Pequeña</option>
+                            <option value="Mediana">Mediana</option>
+                            <option value="Grande">Grande</option>
+                            <option value="Otros">Otros</option>
+                         </select>
+                      </div>
+                      <div class="mb-3">
+                         <label for="sector" class="form-label">Sector</label>
+                         <input type="text" id="sector" class="form-control">
+                      </div>
+                      <div class="mb-3" id="razonSocialDiv">
+                         <label for="razonSocial" class="form-label">Razón social de la empresa</label>
+                         <input type="text" id="razonSocial" class="form-control">
+                      </div>
+                      <div class="mb-3">
+                         <label for="correo" class="form-label">Correo electrónico</label>
+                         <input type="email" id="correo" class="form-control">
+                      </div>
+                      <div class="mb-3">
+                         <label for="contrasena" class="form-label">Contraseña</label>
+                         <input type="password" id="contrasena" class="form-control">
+                      </div>
+                      <button type="submit" class="btn btn-primary">Registrarse</button>
+                   </form>
                 </div>
-            
-                <div class="mb-3">
-                    <label for="nombre" class="form-label">Nombre</label>
-                    <input type="text" id="nombre" class="form-control">
-                </div>
-            
-                <div class="mb-3">
-                    <label for="tipoEmpresa" class="form-label">Tipo de empresa</label>
-                    <select id="tipoEmpresa" class="form-select">
-                        <option value="Pequeña">Pequeña</option>
-                        <option value="Mediana">Mediana</option>
-                        <option value="Grande">Grande</option>
-                        <option value="Otros">Otros</option>
-                    </select>
-                </div>
-            
-                <div class="mb-3">
-                    <label for="sector" class="form-label">Sector</label>
-                    <input type="text" id="sector" class="form-control">
-                </div>
-            
-                <div class="mb-3" id="razonSocialDiv">
-                    <label for="razonSocial" class="form-label">Razón social de la empresa</label>
-                    <input type="text" id="razonSocial" class="form-control">
-                </div>
-            
-                <div class="mb-3">
-                    <label for="correo" class="form-label">Correo electrónico</label>
-                    <input type="email" id="correo" class="form-control">
-                </div>
-            
-                <div class="mb-3">
-                    <label for="contrasena" class="form-label">Contraseña</label>
-                    <input type="password" id="contrasena" class="form-control">
-                </div>
-            
-                <button type="submit" class="btn btn-primary">Registrarse</button>
-            </form>
-            
-            </div>
+             </div>
           </div>
-          
-        </div>
-        <div class="col-md-6 d-flex justify-content-center align-items-center">
-            <img src="assets/img/register-img.jpg" class="img-fluid rounded-circle shadow-sm" style="width: 550px; height: 550px;" alt="Descripción de la imagen">
+          <div class="col-md-6 d-flex justify-content-center align-items-center">
+             <div class="oval-image-container">
+                <img src="assets/img/register-img.jpg" class="img-fluid shadow-sm" alt="Descripción de la imagen">
+             </div>
           </div>
-          
-          
-      </div>
+       </div>
     </div>
-  </section>
+ </section>
+ <section>
+    <!-- Toast para mostrar mensajes -->
+    <div id="toast" class="toast align-items-center text-white bg-primary border-0" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="d-flex">
+            <div class="toast-body">
+                ¡Registro exitoso! Te has registrado correctamente.
+            </div>
+            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+    </div>
+</section>
