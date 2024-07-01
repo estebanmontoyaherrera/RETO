@@ -7,6 +7,8 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-adminpanel',
+  standalone: true,
+  imports: [ChartLineComponent],
   templateUrl: './adminpanel.component.html',
   styleUrls: ['./adminpanel.component.css']
 })

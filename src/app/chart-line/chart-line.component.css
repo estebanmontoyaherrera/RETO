@@ -1,0 +1,10 @@
+.contain-chart{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+/* .graphic#chart{
+    width: 90px;
+    height: 90px;
+} */

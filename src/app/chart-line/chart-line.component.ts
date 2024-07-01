@@ -16,20 +16,21 @@ export class ChartLineComponent implements OnInit {
 
     // datos
     const data = {
-      labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+      labels: ["Pequeña", "Mediana", "Grande", "Otra"],
       datasets: [{
-        label: 'My First Dataset',
+        label: 'Cantidad de empresas discriminadas por el tipo',
         data: [65, 59, 80, 81, 56, 55, 40],
         fill: false,
         borderColor: 'rgb(75, 192, 192)',
-        tension: 0.1
+        tension: 0.1, 
       }]
     };
 
     // Creamos la gráfica
     this.chart = new Chart("chart", {
       type: 'line' as ChartType, // tipo de la gráfica 
-      data // datos 
+      data, // datos 
+      
     })
 
   }
