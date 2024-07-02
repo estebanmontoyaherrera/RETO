@@ -1,11 +1,12 @@
 import { OnInit } from '@angular/core';
 import { Component } from '@angular/core';
 import { Chart, ChartType } from 'chart.js/auto';
+import { BaseChartDirective } from 'ng2-charts';
 
 @Component({
   selector: 'app-chart-line',
   standalone: true,
-  imports: [],
+  imports: [BaseChartDirective],
   templateUrl: './chart-line.component.html',
   styleUrl: './chart-line.component.css'
 })
@@ -30,10 +31,14 @@ export class ChartLineComponent implements OnInit {
     this.chart = new Chart("chart", {
       type: 'line' as ChartType, // tipo de la gráfica 
       data, // datos 
+      options: {
+        plugins: {
+
+        }
+      }
       
     })
 
   }
-
-
+  
 }
