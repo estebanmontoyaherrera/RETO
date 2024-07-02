@@ -1,0 +1,240 @@
+.carousel-item {
+  position: relative;
+  width: 100%;
+  height: 550px; /* Altura estándar para todos los slides */
+  background-color: #000; /* Puedes ajustar el color de fondo si es necesario */
+  border-radius: 10px; /* Bordes redondeados para cada item */
+}
+
+/* Estilos para el contenedor del iframe */
+.carousel-item .embed-responsive {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%; /* Asegura que el iframe cubra toda la altura del contenedor */
+  border-radius: 10px; /* Bordes redondeados para el contenedor del iframe */
+  overflow: hidden; /* Para asegurarse de que los elementos internos respeten el borde redondeado */
+}
+
+.carousel-item .embed-responsive::before {
+  content: "";
+  display: block;
+  padding-top: 56.25%; /* 16:9 aspect ratio */
+}
+
+.carousel-item .embed-responsive-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  border: 0;
+}
+
+/* Estilos para las imágenes dentro del carrusel */
+.carousel-item img {
+  width: 100%;
+  height: 100%; /* Asegura que la imagen cubra toda la altura del contenedor */
+  object-fit: cover; /* Asegura que la imagen se ajuste al contenedor sin distorsión */
+  border-radius: 10px; /* Bordes redondeados para las imágenes */
+}
+
+/* Estilos para las flechas del carrusel */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-image: none; /* Elimina la imagen de fondo existente */
+  border: solid blue; /* Color de la flecha */
+  border-width: 0 3px 3px 0; /* Ajusta el ancho del borde para crear la flecha */
+  display: inline-block;
+  padding: 10px; /* Ajusta el tamaño del padding */
+  width: 20px;
+  height: 20px;
+}
+
+.carousel-control-prev-icon {
+  transform: rotate(135deg); /* Rota la flecha para apuntar a la izquierda */
+}
+
+.carousel-control-next-icon {
+  transform: rotate(-45deg); /* Rota la flecha para apuntar a la derecha */
+}
+
+/* Estilo adicional para el carrusel */
+.carousel {
+  border: 2px solid rgba(255, 255, 255, 0.1); /* Borde suave */
+  border-radius: 10px; /* Bordes redondeados */
+  overflow: hidden; /* Para asegurarse de que los elementos internos respeten el borde redondeado */
+}
+
+.informativo {
+
+color: aqua;
+}
+
+.informativo {
+  position: relative;
+  color: #0061DF; /* Color inicial del texto */
+  font-size: 2rem; /* Tamaño de fuente ajustado si es necesario */
+  transition: color 0.3s ease; /* Transición suave para el cambio de color */
+}
+
+.informativo::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  margin-top: 5px;
+  right: 0;
+  background: #0061DF; /* Color de la línea de subrayado */
+  transition: width 0.3s ease, background-color 0.3s ease; 
+  -webkit-transition: width 0.4s ease, background-color 0.4s ease;
+}
+
+.informativo:hover {
+  color: #00006D; /* Cambia el color del texto cuando se pasa el mouse */
+}
+
+.informativo:hover::after {
+  width: 100%; /* Subraya completamente el texto */
+  background: #F8D302; /* Cambia el color de la línea de subrayado */
+}
+
+.card {
+  border: 2px solid #EBECEF; /* Color del borde */
+  border-radius: 15px; /* Bordes redondeados */
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px); /* Efecto de elevación */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra al pasar el mouse */
+}
+
+.card-img-top {
+  height: 180px; /* Altura de la imagen */
+  object-fit: cover; /* Ajusta la imagen para cubrir el área */
+  border-bottom: 2px solid #EBECEF; /* Borde inferior */
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.btn-primary {
+  background-color: #0061DF;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0048a1; /* Color más oscuro al pasar el mouse */
+}
+
+.card-body {
+  padding: 20px;
+  text-align: left;
+}
+
+.row {
+  margin-top: 50px;
+}
+
+.card-body a {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  color: #0061DF;
+  font-weight: bold;
+}
+
+.card-body a::after {
+  content: '→';
+  margin-left: 10px;
+  transition: margin-left 0.3s ease;
+}
+
+.card-body a:hover::after {
+  margin-left: 15px; /* Efecto de deslizamiento para la flecha */
+}
+
+.card {
+    border: 2px solid #EBECEF; /* Color del borde */
+    border-radius: 15px; /* Bordes redondeados */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Efecto de elevación */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra al pasar el mouse */
+}
+
+.card-img-top {
+    height: 180px; /* Altura de la imagen */
+    object-fit: cover; /* Ajusta la imagen para cubrir el área */
+    border-bottom: 2px solid #EBECEF; /* Borde inferior */
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    background-color: #0061DF;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #F8D302; /* Color más oscuro al pasar el mouse */
+}
+
+.card-body {
+    padding: 20px;
+    text-align: left;
+}
+
+.row {
+    margin-top: 50px;
+}
+
+.card-body a {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    color: #f9f9f8;
+    font-weight: bold;
+}
+
+.card-body a::after {
+    content: '→';
+    margin-left: 10px;
+    transition: margin-left 0.3s ease;
+}
+
+.card-body a:hover::after {
+    margin-left: 15px; /* Efecto de deslizamiento para la flecha */
+}
