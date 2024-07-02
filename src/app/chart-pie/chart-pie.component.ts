@@ -18,17 +18,19 @@ export class ChartPieComponent implements OnInit {
 
     const data = {
       labels: [
-        'Red',
-        'Blue',
-        'Yellow'
+        'Pequeña',
+        'Mediana',
+        'Grande', 
+        'Otra'
       ],
       datasets: [{
         label: 'My First Dataset',
-        data: [300, 50, 100],
+        data: [300, 50, 100, 80],
         backgroundColor: [
           'rgb(255, 99, 132)',
           'rgb(54, 162, 235)',
-          'rgb(255, 205, 86)'
+          'rgb(255, 205, 86)', 
+          'rgb(200, 100, 50'
         ],
         hoverOffset: 4
       }]

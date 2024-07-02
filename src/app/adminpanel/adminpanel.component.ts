@@ -10,7 +10,7 @@ import { ChartPieComponent } from '../chart-pie/chart-pie.component';
 @Component({
   selector: 'app-adminpanel',
   standalone: true,
-  imports: [ChartLineComponent, ChartRadarComponent, ChartPieComponent],
+  imports: [ChartLineComponent, ChartRadarComponent, ChartPieComponent, ChartRadarComponent],
   templateUrl: './adminpanel.component.html',
   styleUrls: ['./adminpanel.component.css']
 })

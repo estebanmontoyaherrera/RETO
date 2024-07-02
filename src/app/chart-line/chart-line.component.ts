@@ -28,7 +28,7 @@ export class ChartLineComponent implements OnInit {
     };
 
     // Creamos la gráfica
-    this.chart = new Chart("chart", {
+    this.chart = new Chart("chart-line", {
       type: 'line' as ChartType, // tipo de la gráfica 
       data, // datos 
       options: {
