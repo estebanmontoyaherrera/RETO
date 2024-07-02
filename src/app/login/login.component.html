@@ -1,9 +1,8 @@
-<section style="margin-bottom:15%;">
+<section style="margin-bottom:6%;">
     <div class="container">
         <br>
-        <h2 class="section-title text-center">Inicio de Sesión</h2>
-        <p class="text-center">Ingresa tus credenciales para acceder a nuestras herramientas de evaluación.</p>
-
+        <h1 class="text-center mt-5 mb-4 informativo">Inicio de Sesión</h1>
+        
         <div class="row justify-content-center signup">
             <div class="col-md-6">
                 <div class="card shadow-sm">
@@ -13,18 +12,28 @@
                                 <label for="correoLogin" class="form-label">Correo electrónico</label>
                                 <input type="email" id="correoLogin" class="form-control" value="admin@admin.com" required>
                             </div>
-
+                
                             <div class="mb-3">
                                 <label for="contrasenaLogin" class="form-label">Contraseña</label>
                                 <input type="password" id="contrasenaLogin" class="form-control" value="admin123" required>
                             </div>
-
-                            <div class="d-grid">
-                                <a  class="btn btn-primary" href="/admin">Iniciar sesión</a>
+                
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input " id="recordarContrasena" checked>
+                                <label class="form-check-label" for="recordarContrasena">Recordar contraseña</label>
+                            </div>
+                
+                            <div class="d-grid mb-3">
+                                <a class="btn btn-primary" href="/admin">Iniciar sesión</a>
+                            </div>
+                
+                            <div class="text-center">
+                                <a href="#" class="text-dark ">¿Olvidó su contraseña?</a>
                             </div>
                         </form>
                     </div>
                 </div>
+                
             </div>
         </div>
     </div>
