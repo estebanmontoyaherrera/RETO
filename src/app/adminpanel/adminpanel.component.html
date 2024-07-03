@@ -1,7 +1,7 @@
-<div class="container-fluid">
+<div class="container">
   <br>
-  <h2 class="text-center">Panel de Administración</h2>
-  <hr>
+  <h1 class="text-center mt-5 mb-4 informativo">Panel de Administración</h1>
+  
 
   <!-- Filtros y acciones -->
   <div class="row mb-3">
@@ -27,16 +27,16 @@
           Resultados de Pruebas
         </div>
         <div class="card-body">
-          <canvas id="graficaResultados" width="400" height="300"></canvas>
+          <!-- <app-chart-line></app-chart-line> -->
         </div>
       </div>
     </div>
     <div class="col-md-6">
-      <div class="card">
+      <div class="card" >
         <div class="card-header">
           Registros Recientes
         </div>
-        <div class="card-body">
+        <div class="card-body" style="margin-bottom:1.3%;">
           <div class="table-responsive">
             <table class="table table-striped">
               <thead>
@@ -136,4 +136,15 @@
     </div>
   </div>
 </div>
-<app-chart-line></app-chart-line>
+<div class="chart-contain">
+  <div class="chart-line">
+    <app-chart-line></app-chart-line>
+  </div>
+  <div class="chart-pie">
+    <app-chart-pie></app-chart-pie>
+  </div>
+  <div class="chart-radar">
+    <app-chart-radar></app-chart-radar>
+  </div>  
+</div>
+
