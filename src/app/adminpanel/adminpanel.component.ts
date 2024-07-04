@@ -4,6 +4,8 @@ import { RadarController } from 'chart.js';
 import { Chart } from 'chart.js';
 import { ChartLineComponent } from '../chart-line/chart-line.component';
 import { RouterLink, RouterOutlet } from '@angular/router';
+import { ChartRadarComponent } from '../chart-radar/chart-radar.component';
+import { ChartPieComponent } from '../chart-pie/chart-pie.component';
 
 interface Empresa {
   nombre: string;
@@ -15,7 +17,7 @@ interface Empresa {
 @Component({
   selector: 'app-adminpanel',
   standalone: true,
-  imports: [ChartLineComponent],
+  imports: [ChartLineComponent, ChartRadarComponent, ChartPieComponent, ChartRadarComponent],
   templateUrl: './adminpanel.component.html',
   styleUrls: ['./adminpanel.component.css']
 })
