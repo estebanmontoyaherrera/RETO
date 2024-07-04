@@ -14,8 +14,11 @@ export class LoginComponent {
   validarInicioSesion() {
     const correo = (document.getElementById("correoLogin") as HTMLInputElement).value;
     const contrasena = (document.getElementById("contrasenaLogin") as HTMLInputElement).value;
-
+  
     if (correo === 'admin@admin.com' && contrasena === 'admin123') {
+      // Almacenar el estado de autenticación
+      localStorage.setItem('isLoggedIn', 'true');
+  
       // Redireccionar al panel de administración
       this.router.navigate(['/admin']);
     } else {
@@ -29,4 +32,5 @@ export class LoginComponent {
       });
     }
   }
+  
 }

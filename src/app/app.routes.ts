@@ -4,13 +4,13 @@ import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
 import { AdminpanelComponent } from './views/adminpanel/adminpanel.component';
 import { ChartLineComponent } from './views/chart-line/chart-line.component';
- // Añadir un componente para el 404
+import { AuthGuard } from './auth.guard'; // Importar la guarda de rutas
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },        // Ruta para la página principal
   { path: 'login', component: LoginComponent },  // Ruta para la página de login
   { path: 'register', component: RegisterComponent },  // Ruta para la página de registro
-  { path: 'admin', component: AdminpanelComponent },    // Ruta para el panel de administración
+  { path: 'admin', component: AdminpanelComponent, canActivate: [AuthGuard] }, // Proteger la ruta con la guarda de rutas
   { path: 'graphic', component: ChartLineComponent },    // Ruta para el componente de gráfico
   
 ];

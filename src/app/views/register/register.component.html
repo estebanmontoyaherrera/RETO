@@ -25,6 +25,7 @@
                <div class="mb-3">
                  <label for="tipoEmpresa" class="form-label">Tipo de empresa</label>
                  <select id="tipoEmpresa" class="form-select">
+                  <option value="" hidden>Selecciona una opción</option>
                    <option value="Pequeña">Pequeña</option>
                    <option value="Mediana">Mediana</option>
                    <option value="Grande">Grande</option>
@@ -46,7 +47,9 @@
                <div class="mb-3">
                  <label for="contrasena" class="form-label">Contraseña</label>
                  <input type="password" id="contrasena" class="form-control">
+                 
                </div>
+               
                <button type="button" class="btn btn-primary" (click)="showSuccessAlert()">Registrarse</button>
              </form>
            </div>
