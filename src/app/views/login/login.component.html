@@ -15,7 +15,7 @@
                 
                             <div class="mb-3">
                                 <label for="contrasenaLogin" class="form-label">Contraseña</label>
-                                <input type="password" id="contrasenaLogin" class="form-control" value="admin123" required>
+                                <input type="password" id="contrasenaLogin" class="form-control" value="" required>
                             </div>
                 
                             <div class="mb-3 form-check">
@@ -24,7 +24,7 @@
                             </div>
                 
                             <div class="d-grid mb-3">
-                                <a class="btn btn-primary" href="/admin">Iniciar sesión</a>
+                                <button type="button" class="btn btn-primary" (click)="validarInicioSesion()">Iniciar sesión</button>
                             </div>
                 
                             <div class="text-center">
@@ -38,5 +38,3 @@
         </div>
     </div>
 </section>
-
-
