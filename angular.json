@@ -33,9 +33,11 @@
               "node_modules/bootstrap/dist/css/bootstrap.css"
             ],
             "scripts": [
+              
               "node_modules/@popperjs/core/dist/umd/popper.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.js",
               "node_modules/sweetalert2/dist/sweetalert2.all.min.js"
+             
             ]
           },
           "configurations": {

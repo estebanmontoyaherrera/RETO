@@ -6,13 +6,8 @@ import { ChartLineComponent } from '../chart-line/chart-line.component';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { ChartRadarComponent } from '../chart-radar/chart-radar.component';
 import { ChartPieComponent } from '../chart-pie/chart-pie.component';
+import { Router } from '@angular/router';
 
-interface Empresa {
-  nombre: string;
-  tipoEmpresa: string;
-  sector: string;
-  razonSocial: string;
-}
 
 @Component({
   selector: 'app-adminpanel',
@@ -23,7 +18,7 @@ interface Empresa {
 })
 export class AdminpanelComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) {}
 
   ngOnInit(): void {
     // Inicializa tooltips
@@ -33,7 +28,13 @@ export class AdminpanelComponent implements OnInit {
       
   }
 
+  cerrarSesion() {
+    // Limpiar cualquier estado de sesión almacenado (por ejemplo, en localStorage)
+    localStorage.removeItem('isLoggedIn');
 
+    // Redirigir al usuario al inicio de sesión
+    this.router.navigate(['/login']);
+  }
  
   
 }
