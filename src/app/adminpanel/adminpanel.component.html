@@ -2,23 +2,6 @@
   <br>
   <h1 class="text-center mt-5 mb-4 informativo">Panel de Administración</h1>
   
-
-  <!-- Filtros y acciones -->
-  <div class="row mb-3">
-    <div class="col-md-6">
-      <div class="input-group">
-        <span class="input-group-text">Filtrar por:</span>
-        <select class="form-select">
-          <option selected>Seleccionar...</option>
-          <option value="pequeña">Pequeñas empresas</option>
-          <option value="mediana">Medianas empresas</option>
-          <option value="grande">Grandes empresas</option>
-        </select>
-        <button class="btn btn-primary">Aplicar</button>
-      </div>
-    </div>
-  </div>
-
   <!-- Gráficas y datos relevantes -->
   <div class="row">
     <div class="col-md-6">
@@ -38,7 +21,7 @@
         </div>
         <div class="card-body" style="margin-bottom:1.3%;">
           <div class="table-responsive">
-            <table class="table table-striped">
+            <table class="table table-striped" >
               <thead>
                 <tr>
                   <th>#</th>
@@ -58,13 +41,16 @@
                   <td>Servicios</td>
                   <td>Empresa A S.A.S.</td>
                   <td>
-                    <button class="btn btn-sm btn-link" data-bs-toggle="tooltip" data-bs-placement="top" title="Ver Detalles">
+                    <button class="btn btn-sm btn-link ver-detalle-btn" data-bs-toggle="modal" data-bs-target="#detalleModal"
+                      data-nombre="Empresa A" data-tipo="Pequeña" data-sector="Servicios" data-razon-social="Empresa A S.A.S.">
                       <i class="fas fa-list"></i>
                     </button>
-                    <button class="btn btn-sm btn-link" style="color: red;" data-bs-toggle="tooltip" data-bs-placement="top" title="Eliminar">
-                      <i class="fas fa-trash-alt"></i>
-                    </button>
+                       <button class="btn btn-sm btn-link eliminar-btn" style="color: red;" data-bs-toggle="tooltip" data-bs-placement="top" title="Eliminar"
+                    >
+                    <i class="fas fa-trash-alt"></i>
+                  </button>
                   </td>
+                  
                 </tr>
                 <tr>
                   <td>2</td>
@@ -73,9 +59,10 @@
                   <td>Tecnología</td>
                   <td>Empresa B S.A.S.</td>
                   <td>
-                    <button class="btn btn-sm btn-link" data-bs-toggle="tooltip" data-bs-placement="top" title="Ver Detalles">
-                      <i class="fas fa-list"></i>
-                    </button>
+                    <button class="btn btn-sm btn-link ver-detalle-btn" data-bs-toggle="modal" data-bs-target="#detalleModal"
+                    data-nombre="Empresa A" data-tipo="Pequeña" data-sector="Servicios" data-razon-social="Empresa A S.A.S.">
+                    <i class="fas fa-list"></i>
+                  </button>
                     <button class="btn btn-sm btn-link" style="color: red;" data-bs-toggle="tooltip" data-bs-placement="top" title="Eliminar">
                       <i class="fas fa-trash-alt"></i>
                     </button>
@@ -88,7 +75,8 @@
                   <td>Tecnología</td>
                   <td>Empresa C S.A.S.</td>
                   <td>
-                    <button class="btn btn-sm btn-link" data-bs-toggle="tooltip" data-bs-placement="top" title="Ver Detalles">
+                    <button class="btn btn-sm btn-link ver-detalle-btn" data-bs-toggle="modal" data-bs-target="#detalleModal"
+                      data-nombre="Empresa A" data-tipo="Pequeña" data-sector="Servicios" data-razon-social="Empresa A S.A.S.">
                       <i class="fas fa-list"></i>
                     </button>
                     <button class="btn btn-sm btn-link" style="color: red;" data-bs-toggle="tooltip" data-bs-placement="top" title="Eliminar">
@@ -103,9 +91,10 @@
                   <td>Tecnología</td>
                   <td>Empresa D S.A.S.</td>
                   <td>
-                    <button class="btn btn-sm btn-link" data-bs-toggle="tooltip" data-bs-placement="top" title="Ver Detalles">
-                      <i class="fas fa-list"></i>
-                    </button>
+                    <button class="btn btn-sm btn-link ver-detalle-btn" data-bs-toggle="modal" data-bs-target="#detalleModal"
+                    data-nombre="Empresa A" data-tipo="Pequeña" data-sector="Servicios" data-razon-social="Empresa A S.A.S.">
+                    <i class="fas fa-list"></i>
+                  </button>
                     <button class="btn btn-sm btn-link" style="color: red;" data-bs-toggle="tooltip" data-bs-placement="top" title="Eliminar">
                       <i class="fas fa-trash-alt"></i>
                     </button>
@@ -118,7 +107,8 @@
                   <td>Tecnología</td>
                   <td>Empresa F S.A.S.</td>
                   <td>
-                    <button class="btn btn-sm btn-link" data-bs-toggle="tooltip" data-bs-placement="top" title="Ver Detalles">
+                    <button class="btn btn-sm btn-link ver-detalle-btn" data-bs-toggle="modal" data-bs-target="#detalleModal"
+                      data-nombre="Empresa A" data-tipo="Pequeña" data-sector="Servicios" data-razon-social="Empresa A S.A.S.">
                       <i class="fas fa-list"></i>
                     </button>
                     <button class="btn btn-sm btn-link" style="color: red;" data-bs-toggle="tooltip" data-bs-placement="top" title="Eliminar">
@@ -136,4 +126,29 @@
     </div>
   </div>
 </div>
-<app-chart-line></app-chart-line>
+
+<!-- Modal -->
+<div class="modal fade" id="detalleModal" tabindex="-1" aria-labelledby="detalleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="detalleModalLabel">Detalles del Registro</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Contenido dinámico de los detalles del registro -->
+        <p>Nombre: <span id="detalleNombre"></span></p>
+        <p>Tipo de Empresa: <span id="detalleTipo"></span></p>
+        <p>Sector: <span id="detalleSector"></span></p>
+        <p>Razón Social: <span id="detalleRazonSocial"></span></p>
+        <!-- Agrega más campos según sea necesario -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

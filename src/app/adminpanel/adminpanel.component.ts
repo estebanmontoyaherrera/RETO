@@ -1,9 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-import { Tooltip } from 'bootstrap';
+import bootstrap, { Tooltip } from 'bootstrap';
 import { RadarController } from 'chart.js';
 import { Chart } from 'chart.js';
 import { ChartLineComponent } from '../chart-line/chart-line.component';
 import { RouterLink, RouterOutlet } from '@angular/router';
+
+interface Empresa {
+  nombre: string;
+  tipoEmpresa: string;
+  sector: string;
+  razonSocial: string;
+}
 
 @Component({
   selector: 'app-adminpanel',
@@ -20,8 +27,12 @@ export class AdminpanelComponent implements OnInit {
     // Inicializa tooltips
     const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
     tooltipTriggerList.map((tooltipTriggerEl) => new Tooltip(tooltipTriggerEl));
+      
+      
   }
-  /** Necesario para las gráficas */
+
+
+ 
   
 }
 
