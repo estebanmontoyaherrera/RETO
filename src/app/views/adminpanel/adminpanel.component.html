@@ -4,7 +4,7 @@
     
     <button class="navbar-toggler ms-auto" style="border:0px;" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2"
       aria-controls="offcanvasNavbar2">
-      <span class="navbar-toggler-icon" style=""></span>
+      <span class="navbar-toggler-icon" ></span>
     </button>
     <div class="offcanvas offcanvas-end bg-white " tabindex="-1" id="offcanvasNavbar2"
       aria-labelledby="offcanvasNavbarLabel2">
@@ -29,10 +29,19 @@
           
         </ul>
         <ul class="navbar-nav ms-auto">
-         
-          <li class="nav-item">
-            <button type="button" class="nav-link text-dark btn btn-link" (click)="cerrarSesion()"><i class="fas fa-sign-out-alt me-2"></i>Cerrar Sesión</button>
+        
+          <!-- Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-user me-2"></i>Perfil
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">              
+              <li><a class="dropdown-item" href="/admin">Mi Perfil</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><button class="dropdown-item" href="#" (click)="cerrarSesion()"><i class="fas fa-sign-out-alt me-2"></i>Cerrar Sesión</button></li>
+            </ul>
           </li>
+          <!-- End Dropdown -->
         </ul>
       </div>
     </div>
