@@ -4,7 +4,7 @@
     
     <button class="navbar-toggler ms-auto" style="border:0px;" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2"
       aria-controls="offcanvasNavbar2">
-      <span class="navbar-toggler-icon"></span>
+      <span class="navbar-toggler-icon" style=""></span>
     </button>
     <div class="offcanvas offcanvas-end bg-white " tabindex="-1" id="offcanvasNavbar2"
       aria-labelledby="offcanvasNavbarLabel2">
@@ -13,16 +13,23 @@
         <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-auto">
+        <ul class="navbar-nav  mb-2 mb-lg-0 ms-auto">
           <li class="nav-item">
-            <a class="nav-link text-dark me-4" href="#">Registros</a>
+            <a class="nav-link text-dark me-4" href="/admin"><i class="fas fa-tachometer-alt me-2"></i>Dashboard</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-dark me-4" href="#">Resultados de Pruebas</a>
+            <a class="nav-link text-dark me-4" href="/admin"><i class="fas fa-file-alt me-2"></i>Registros</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-dark me-4" href="#">Gráficas</a>
+            <a class="nav-link text-dark me-4" href="/admin"><i class="fas fa-poll me-2"></i>Resultados de Pruebas</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark me-4" href="/admin"><i class="fas fa-chart-bar me-2"></i>Gráficas</a>
+          </li>
+          
+        </ul>
+        <ul class="navbar-nav ms-auto">
+         
           <li class="nav-item">
             <button type="button" class="nav-link text-dark btn btn-link" (click)="cerrarSesion()"><i class="fas fa-sign-out-alt me-2"></i>Cerrar Sesión</button>
           </li>
@@ -43,8 +50,8 @@
   <!-- Gráficas y datos relevantes -->
   <div class="row">
     <div class="col-md-6">
-      <div class="card">
-        <div class="card-header">
+      <div class="card shadow">
+        <div class="card-header bg-white">
           Resultados de Pruebas
         </div>
         <div class="card-body">
@@ -53,8 +60,8 @@
       </div>
     </div>
     <div class="col-md-6">
-      <div class="card" >
-        <div class="card-header">
+      <div class="card shadow" >
+        <div class="card-header bg-white">
           Registros Recientes
         </div>
         <div class="card-body" style="margin-bottom:1.3%;">
@@ -167,8 +174,8 @@
   <div class="row" style="margin-top:1%;">
       
     <div class="col-md-6">
-      <div class="card">
-        <div class="card-header">
+      <div class="card shadow">
+        <div class="card-header bg-white">
           Resultados pie
         </div>
         <div class="card-body">
@@ -178,8 +185,8 @@
     </div>
 
     <div class="col-md-6">
-      <div class="card">
-        <div class="card-header">
+      <div class="card shadow" >
+        <div class="card-header bg-white">
           Resultados Radar
         </div>
         <div class="card-body">
