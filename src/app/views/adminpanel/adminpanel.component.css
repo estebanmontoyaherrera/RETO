@@ -1,7 +1,7 @@
 .informativo {
 
     color: aqua;
-    
+    }
     
     .informativo {
       position: relative;
@@ -31,24 +31,3 @@
       width: 100%; /* Subraya completamente el texto */
       background: #F8D302; /* Cambia el color de la línea de subrayado */
     }
-}
-.chart-line{
-  width: 700px;
-  height: 350px;
-}
-.chart-pie{
-  width: 300px;
-  height: 300px;
-}
-.chart-radar{
-  width: 480px;
-  height: 450px;
-}
-.chart-contain{
-  position: relative;
-  top: 65px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-}
