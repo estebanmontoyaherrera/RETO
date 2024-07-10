@@ -18,6 +18,7 @@ export class LoginComponent {
     if (correo === 'admin@admin.com' && contrasena === 'admin123') {
       // Almacenar el estado de autenticación
       localStorage.setItem('isLoggedIn', 'true');
+      localStorage.setItem('userEmail', correo);
   
       // Redireccionar al panel de administración
       this.router.navigate(['/admin']);

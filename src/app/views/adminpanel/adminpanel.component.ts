@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit  } from '@angular/core';
 import bootstrap, { Tooltip } from 'bootstrap';
 import { RadarController } from 'chart.js';
 import { Chart } from 'chart.js';
@@ -19,8 +19,10 @@ import { Router } from '@angular/router';
 export class AdminpanelComponent implements OnInit {
 
   constructor(private router: Router) {}
+  userEmail: string | null = '';
 
   ngOnInit(): void {
+    this.userEmail = localStorage.getItem('userEmail');
     // Inicializa tooltips
     const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
     tooltipTriggerList.map((tooltipTriggerEl) => new Tooltip(tooltipTriggerEl));

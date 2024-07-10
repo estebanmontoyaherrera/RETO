@@ -6,6 +6,7 @@ import { AdminpanelComponent } from './views/adminpanel/adminpanel.component';
 import { ChartLineComponent } from './views/chart-line/chart-line.component';
 import { AuthGuard } from './auth.guard'; // Importar la guarda de rutas
 
+
 const routes = [
     { path: '', component: HomeComponent },
     { path: 'login', component: LoginComponent },

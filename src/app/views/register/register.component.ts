@@ -1,12 +1,37 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import Swal from 'sweetalert2';
-
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 @Component({
   selector: 'app-register',
+  standalone: true,
+  imports: [ReactiveFormsModule, CommonModule],
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent {
+
+  registerForm = new FormGroup({
+    tipoPersona: new FormControl('', Validators.required),
+    nombre: new FormControl('', Validators.required),
+    tipoEmpresa: new FormControl('', Validators.required),
+    sector: new FormControl('', Validators.required),
+    razonSocial: new FormControl('', Validators.required),
+    correo: new FormControl('', [Validators.required, Validators.email]),
+    contrasena: new FormControl('', Validators.required),
+    passwordConfirm: new FormControl('', Validators.required),
+    terms: new FormControl(false, Validators.requiredTrue)
+  })
+
+  register() {
+    console.log(this.registerForm.valid)
+    console.log(this.registerForm.value)
+    console.log(this.registerForm.get('name')?.value)
+    if (this.registerForm.valid) {
+      // store the form data
+      console.log('SAVED')
+    }
+  }
 
   validarFormulario() {
     const tipoPersona = (document.getElementById("tipoPersona") as HTMLSelectElement).value;
