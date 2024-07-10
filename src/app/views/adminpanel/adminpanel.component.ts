@@ -7,7 +7,7 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 import { ChartRadarComponent } from '../chart-radar/chart-radar.component';
 import { ChartPieComponent } from '../chart-pie/chart-pie.component';
 import { Router } from '@angular/router';
-
+import { AuthService } from '../../auth.service';
 
 @Component({
   selector: 'app-adminpanel',
@@ -18,8 +18,9 @@ import { Router } from '@angular/router';
 })
 export class AdminpanelComponent implements OnInit {
 
-  constructor(private router: Router) {}
   userEmail: string | null = '';
+
+  constructor(private authService: AuthService) {}
 
   ngOnInit(): void {
     this.userEmail = localStorage.getItem('userEmail');
@@ -31,11 +32,7 @@ export class AdminpanelComponent implements OnInit {
   }
 
   cerrarSesion() {
-    // Limpiar cualquier estado de sesión almacenado (por ejemplo, en localStorage)
-    localStorage.removeItem('isLoggedIn');
-
-    // Redirigir al usuario al inicio de sesión
-    this.router.navigate(['/login']);
+    this.authService.logout();
   }
  
   

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import Swal from 'sweetalert2';
 import { Router } from '@angular/router';
+import { AuthService } from '../../auth.service';
 
 @Component({
   selector: 'app-login',
@@ -8,22 +9,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-
-  constructor(private router: Router) {}
+  constructor(private router: Router, private authService: AuthService) {}
 
   validarInicioSesion() {
     const correo = (document.getElementById("correoLogin") as HTMLInputElement).value;
     const contrasena = (document.getElementById("contrasenaLogin") as HTMLInputElement).value;
-  
-    if (correo === 'admin@admin.com' && contrasena === 'admin123') {
-      // Almacenar el estado de autenticación
-      localStorage.setItem('isLoggedIn', 'true');
-      localStorage.setItem('userEmail', correo);
-  
-      // Redireccionar al panel de administración
+
+    if (this.authService.login(correo, contrasena)) {
       this.router.navigate(['/admin']);
     } else {
-      // Mostrar mensaje de error con SweetAlert2
       Swal.fire({
         icon: 'error',
         title: 'Error de inicio de sesión',
@@ -33,5 +27,4 @@ export class LoginComponent {
       });
     }
   }
-  
 }
