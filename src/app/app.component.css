@@ -1,0 +1,32 @@
+footer{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: sans-serif;
+    text-transform: capitalize;
+}
+
+.container-footer{
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+
+.footer-row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-links{
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-links h3{
+    font-size: 30px;
+    margin-bottom: 25px;
+    font-weight: 500;
+    border-bottom: 2px solid #0061DF;
+    display: inline-block;
+}
