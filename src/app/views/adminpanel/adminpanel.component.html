@@ -1,19 +1,18 @@
-<!-- Navbar -->
 <nav class="navbar navbar-expand-lg bg-white">
   <div class="container">
     
     <button class="navbar-toggler ms-auto" style="border:0px;" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2"
       aria-controls="offcanvasNavbar2">
-      <span class="navbar-toggler-icon" ></span>
+      <span class="fas fa-ellipsis-v"></span>
     </button>
-    <div class="offcanvas offcanvas-end bg-white " tabindex="-1" id="offcanvasNavbar2"
+    <div class="offcanvas offcanvas-start bg-white " tabindex="-1" id="offcanvasNavbar2"
       aria-labelledby="offcanvasNavbarLabel2">
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasNavbarLabel2">ADMIN PANEL</h5>
+      <div class="offcanvas-header">               
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel2">Admin Panel</h5>
         <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
-        <ul class="navbar-nav  mb-2 mb-lg-0 ms-auto">
+        <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
           <li class="nav-item">
             <a class="nav-link text-dark me-4" href="/admin"><i class="fas fa-tachometer-alt me-2"></i>Dashboard</a>
           </li>
@@ -26,19 +25,18 @@
           <li class="nav-item">
             <a class="nav-link text-dark me-4" href="/admin"><i class="fas fa-chart-bar me-2"></i>Gráficas</a>
           </li>
-          
         </ul>
         <ul class="navbar-nav ms-auto">
-        
           <!-- Dropdown -->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               <i class="fas fa-user me-2"></i>Perfil
             </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">              
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li><a class="dropdown-item" href="/admin">Mi Perfil</a></li>
+              <li><a class="dropdown-item disabled">{{ userEmail }}</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><button class="dropdown-item" href="#" (click)="cerrarSesion()"><i class="fas fa-sign-out-alt me-2"></i>Cerrar Sesión</button></li>
+              <li><button class="dropdown-item" (click)="cerrarSesion()"><i class="fas fa-sign-out-alt me-2"></i>Cerrar Sesión</button></li>
             </ul>
           </li>
           <!-- End Dropdown -->
@@ -47,6 +45,7 @@
     </div>
   </div>
 </nav>
+
 
 
 
@@ -75,7 +74,7 @@
         </div>
         <div class="card-body" style="margin-bottom:1.3%;">
           <div class="table-responsive">
-            <table class="table table-striped" >
+            <table id="example" class="table table-striped table-bordered" >
               <thead>
                 <tr>
                   <th>#</th>
