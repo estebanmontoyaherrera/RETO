@@ -24,13 +24,8 @@
     "chart.js": "^4.4.3",
     "datatables.net": "^2.0.8",
     "datatables.net-bs5": "^2.0.8",
-<<<<<<< HEAD
     "jquery": "^3.6.0",
     "lottie-web": "^5.12.2",
-=======
-    "datatables.net-dt": "^2.0.3",
-    "jquery": "^3.7.1",
->>>>>>> dea1e6ff7bdab4a1dd8d38bd599284687150c819
     "ng2-charts": "^6.0.1",
     "ngx-lottie": "^11.0.2",
     "popper.js": "^1.16.1",
