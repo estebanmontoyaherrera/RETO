@@ -69,12 +69,12 @@
 
 .informativo {
 
-color: aqua;
+color: #00A9E0;
 }
 
 .informativo {
   position: relative;
-  color: #0061DF; /* Color inicial del texto */
+  color: #000066; /* Color inicial del texto */
   font-size: 2rem; /* Tamaño de fuente ajustado si es necesario */
   transition: color 0.3s ease; /* Transición suave para el cambio de color */
 }
@@ -87,18 +87,18 @@ color: aqua;
   display: block;
   margin-top: 5px;
   right: 0;
-  background: #0061DF; /* Color de la línea de subrayado */
+  background: #00A9E0; /* Color de la línea de subrayado */
   transition: width 0.3s ease, background-color 0.3s ease; 
   -webkit-transition: width 0.4s ease, background-color 0.4s ease;
 }
 
 .informativo:hover {
-  color: #00006D; /* Cambia el color del texto cuando se pasa el mouse */
+  color: #000066; /* Cambia el color del texto cuando se pasa el mouse */
 }
 
 .informativo:hover::after {
   width: 100%; /* Subraya completamente el texto */
-  background: #F8D302; /* Cambia el color de la línea de subrayado */
+  background: #F8D300; /* Cambia el color de la línea de subrayado */
 }
 
 .card {
@@ -131,7 +131,7 @@ color: aqua;
 }
 
 .btn-primary {
-  background-color: #0061DF;
+  background-color: #00A9E0;
   border: none;
   color: white;
   padding: 10px 20px;
@@ -140,7 +140,7 @@ color: aqua;
 }
 
 .btn-primary:hover {
-  background-color: #0048a1; /* Color más oscuro al pasar el mouse */
+  background-color: #000066; /* Color más oscuro al pasar el mouse */
 }
 
 .card-body {
@@ -156,7 +156,7 @@ color: aqua;
   display: inline-block;
   position: relative;
   text-decoration: none;
-  color: #0061DF;
+  color: #000066;
   font-weight: bold;
 }
 
@@ -200,7 +200,7 @@ color: aqua;
 }
 
 .btn-primary {
-    background-color: #0061DF;
+    background-color: #000066;
     border: none;
     color: white;
     padding: 10px 20px;
@@ -209,7 +209,7 @@ color: aqua;
 }
 
 .btn-primary:hover {
-    background-color: #F8D302; /* Color más oscuro al pasar el mouse */
+    background-color: #F8D300; /* Color más oscuro al pasar el mouse */
 }
 
 .card-body {
