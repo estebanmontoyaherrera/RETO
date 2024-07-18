@@ -1,0 +1,10 @@
+#foot{
+    position: relative;
+    top: 56px;
+}
+
+@media ((min-width: 7px) and (max-width: 9px)){/*Ajusta el footer en la parte de abajo en los mobile*/
+    #foot{
+        top: 148px;
+    }
+}

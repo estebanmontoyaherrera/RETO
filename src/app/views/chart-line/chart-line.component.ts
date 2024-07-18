@@ -32,8 +32,14 @@ export class ChartLineComponent implements OnInit {
       type: 'line' as ChartType, // tipo de la gráfica 
       data, // datos 
       options: {
-        plugins: {
-
+        animations:{
+          tension:{
+            duration: 4000,
+            easing: 'linear',
+            from: 1,
+            to: 0,
+            loop: false
+          }
         }
       }
       
