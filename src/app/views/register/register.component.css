@@ -46,3 +46,14 @@
       width: 100%; /* Subraya completamente el texto */
       background: #F8D300; /* Cambia el color de la línea de subrayado */
     }
+
+.card-title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-text{
+  margin-top: 40px;
+  text-align: justify;
+  word-break: break-word;
+}
