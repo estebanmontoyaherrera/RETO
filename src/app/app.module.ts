@@ -12,7 +12,8 @@ const routes = [
     { path: 'login', component: LoginComponent },
     { path: 'register', component: RegisterComponent },
     { path: 'admin', component: AdminpanelComponent, canActivate: [AuthGuard] },
-    { path: 'graphic', component: ChartLineComponent }
+    { path: 'graphic', component: ChartLineComponent },
+   
   
   ];
 
