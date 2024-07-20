@@ -1,30 +1,30 @@
 <section>
-   <div class="container">
-     <div class="row">
-       <div class="col-md-8 offset-md-2">
-         <h1 class="text-center mt-5 mb-4 informativo">Registro de Usuarios</h1>
-       </div>
-     </div>
-     <div class="row">
-       <div class="col-md-6">
-         <div class="card shadow-sm">
-           <div class="card-body">
-             <form id="registroForm">
-               <div class="mb-3">
-                  <label for="tipoPersona" class="form-label">Tipo de persona</label>
-                  <select id="tipoPersona" class="form-select">
-                    <option value="" hidden>Selecciona una opción</option>
-                    <option value="Natural">Natural</option>
-                    <option value="Jurídica">Jurídica</option>
-                  </select>
-               </div>
-               <div class="mb-3">
-                 <label for="nombre" class="form-label">Nombre</label>
-                 <input type="text" id="nombre" class="form-control" required>
-               </div>
-               <div class="mb-3">
-                 <label for="tipoEmpresa" class="form-label">Tipo de empresa</label>
-                 <select id="tipoEmpresa" class="form-select">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <h1 class="text-center mt-5 mb-4 informativo">Registro de Usuarios</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <form [formGroup]="registroForm" (ngSubmit)="onSubmit()">
+              <div class="mb-3">
+                <label for="tipoPersona" class="form-label">Tipo de persona</label>
+                <select id="tipoPersona" class="form-select" formControlName="tipoPersona">
+                  <option value="" hidden>Selecciona una opción</option>
+                  <option value="Natural">Natural</option>
+                  <option value="Jurídica">Jurídica</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" id="nombre" class="form-control" formControlName="nombre">
+              </div>
+              <div class="mb-3">
+                <label for="tipoEmpresa" class="form-label">Tipo de empresa</label>
+                <select id="tipoEmpresa" class="form-select" formControlName="tipoEmpresa">
                   <option value="" hidden>Selecciona una opción</option>
                    <option value="Pequeña">Pequeña</option>
                    <option value="Mediana">Mediana</option>
@@ -50,9 +50,7 @@
                  
                </div>
                
-               <div class="d-grid mb-3">
                <button type="button" class="btn btn-primary" (click)="showSuccessAlert()">Registrarse</button>
-               </div>
              </form>
            </div>
          </div>
@@ -61,7 +59,7 @@
          <div class="card mb-6 shadow-sm">
            <img src="assets/img/banner3.png" class="card-img-top" alt="Panel de Administración">
            <div class="card-body">
-             <h4 class="card-title mb-3">¿Por qué registrarme?</h4>
+             <h4 class="card-title mb-3">¿Porque Registrarme?</h4>
              <p class="card-text">
                El registro de usuarios en la plataforma es esencial para proporcionar una experiencia personalizada, realizar evaluaciones precisas, permitir un seguimiento continuo del progreso, acceder a herramientas interactivas y utilizar un panel de administración para decisiones informadas, todo ello mientras se garantiza la seguridad y confidencialidad de los datos. Esta estructura de registro no solo mejora la eficacia de las evaluaciones sino que también potencia la capacidad de los usuarios para mejorar sus estrategias empresariales de manera continua y eficiente.
              </p>

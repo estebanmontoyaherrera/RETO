@@ -10,26 +10,35 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent {
-
-  registerForm = new FormGroup({
+  registroForm = new FormGroup({
     tipoPersona: new FormControl('', Validators.required),
     nombre: new FormControl('', Validators.required),
-    tipoEmpresa: new FormControl('', Validators.required),
-    sector: new FormControl('', Validators.required),
-    razonSocial: new FormControl('', Validators.required),
+    tipoEmpresa: new FormControl(''),
+    sector: new FormControl(''),
+    razonSocial: new FormControl(''),
     correo: new FormControl('', [Validators.required, Validators.email]),
-    contrasena: new FormControl('', Validators.required),
-    passwordConfirm: new FormControl('', Validators.required),
-    terms: new FormControl(false, Validators.requiredTrue)
-  })
+    contrasena: new FormControl('', Validators.required)
+  });
 
-  register() {
-    console.log(this.registerForm.valid)
-    console.log(this.registerForm.value)
-    console.log(this.registerForm.get('name')?.value)
-    if (this.registerForm.valid) {
-      // store the form data
-      console.log('SAVED')
+  onSubmit() {
+    if (this.registroForm.valid) {
+      const formValue = this.registroForm.value;
+      localStorage.setItem('registro', JSON.stringify(formValue));
+      Swal.fire({
+        icon: 'success',
+        title: '¡Registro exitoso!',
+        text: 'Te has registrado correctamente.',
+        showConfirmButton: true,
+        confirmButtonText: 'Aceptar',
+      });
+    } else {
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: 'Por favor, completa todos los campos requeridos.',
+        showConfirmButton: true,
+        confirmButtonText: 'Aceptar',
+      });
     }
   }
 
