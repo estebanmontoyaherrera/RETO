@@ -17,7 +17,8 @@ export class LoginComponent {
 
     if (this.authService.login(correo, contrasena)) {
       this.router.navigate(['/admin']);
-    } else {
+      
+    } else { 
       Swal.fire({
         icon: 'error',
         title: 'Error de inicio de sesión',
@@ -26,5 +27,6 @@ export class LoginComponent {
         confirmButtonText: 'Aceptar',
       });
     }
+    
   }
 }
