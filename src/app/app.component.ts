@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 //import { RouterOutlet } from '@angular/router';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
+import { AuthService } from './auth.service';
 
 
 @Component({
@@ -11,6 +12,7 @@ import { RouterModule } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'FRONTED';
+  title = 'FRONTED';  
 }
+
 
