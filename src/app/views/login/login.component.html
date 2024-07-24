@@ -1,45 +1,55 @@
-<section style="margin-bottom:6%;" class="signup"> <!-- Clase agregada aquí -->
-    <div class="container">
-        <br>
-        <div class="col-md-8 offset-md-2">
-            <h1 class="text-center mt-5 mb-4 informativo">Inicio de sesión</h1>
-          </div>
-        
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <div class="card shadow-sm">
-                    <div class="card-body">
-                        <form>
-                            <div class="mb-3">
-                                <label for="correoLogin" class="form-label">Correo electrónico</label>
-                                <input type="email" id="correoLogin" class="form-control" value="admin@admin.com" required>
-                            </div>
-                
-                            <div class="mb-3">
-                                <label for="contrasenaLogin" class="form-label">Contraseña</label>
-                                <input type="password" id="contrasenaLogin" class="form-control" value="" required>
-                            </div>
-                
-                            <div class="mb-3 form-check">
-                                <input type="checkbox" class="form-check-input " id="recordarContrasena" checked>
-                                <label class="form-check-label" for="recordarContrasena">Recordar contraseña</label>
-                            </div>
-                
-                            <div class="d-grid mb-3">
-                                <button type="button" class="btn btn-primary" (click)="validarInicioSesion()">Iniciar sesión</button>
-                            </div>
-                
-                            <div class="text-center">
-                                <a href="#" class="text-dark ">¿Olvidó su contraseña?</a>
-                            </div>
-                            <br>
-                            <div class="text-center">
-                                <a href="#" class="text-dark " href="/register">¿No te has registrado ?</a>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
+<app-navbar></app-navbar>
+
+<div class="container col-xl-12 col-xxl-12 px-4 py-5">
+  <div class="row align-items-start g-lg-5 py-5">
+    <div class="col-lg-6 text-lg-start">
+      <h3 class="display-6 fw-bold lh-1 text-body-emphasis mb-3">Inicio de Sesión</h3>
+      <p class="col-lg-10 fs-5">
+        Accede a nuestra plataforma para realizar pruebas diagnósticas basadas en el libro "EstraMyPyme". 
+      </p>
+      <div class="text-center"> <!-- Añadido contenedor para centrar la imagen -->
+        <img class="img-fluid mx-auto" src="img/login/login.jpg" width="400" height="300" alt="Descripción de la imagen">
+      </div>
     </div>
-</section>
+    <div class="col-md-10 mx-auto col-lg-5">
+      <form class="p-4 p-md-5 border rounded-3 bg-body-tertiary shadow-sm">
+        <div class="form-floating mb-3">
+          <select class="form-select form-select-sm shadow-sm" id="userType" aria-label="Tipo de persona">
+            <option selected hidden value="">Selecciona un tipo</option>
+            <option value="Administrador">Administrador</option>
+            <option value="Empresa" selected>Empresa</option> <!-- Seleccionar por defecto -->
+          </select>
+          <label for="userType">Tipo de Usuario</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="email" class="form-control shadow-sm" id="email" placeholder="name@example.com">
+          <label for="email">Email</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="password" class="form-control shadow-sm" id="password" placeholder="Password">
+          <label for="password">Contraseña</label>
+        </div>
+        <div class="checkbox mb-3">
+          <label>
+            <input type="checkbox" class="shadow-sm" value="remember-me"> Recordarme
+          </label>
+        </div>
+        <button type="button" class="w-100 btn btn-lg btn-primary shadow" id="loginButton" style="background-color: #3b71ca;">Iniciar Sesión</button>
+        <hr class="my-4">
+        <small class="text-body-secondary">
+          Al iniciar sesión, aceptas los <a href="#">términos de uso</a>. 
+          ¿No tienes cuenta? <a href="/register">Regístrate aquí</a>.
+        </small>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+  <app-footer></app-footer>

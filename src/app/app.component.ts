@@ -1,18 +1,14 @@
 import { Component } from '@angular/core';
-//import { RouterOutlet } from '@angular/router';
-import { Router, RouterModule } from '@angular/router';
-import { AuthService } from './auth.service';
-
+import { RouterOutlet } from '@angular/router';
+import { NavbarComponent } from "./components/navbar/navbar.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterModule],
+  imports: [RouterOutlet, NavbarComponent],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'FRONTED';  
+  title = 'ESTRAMIPYME';
 }
-
-

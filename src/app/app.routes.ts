@@ -3,26 +3,48 @@ import { HomeComponent } from './views/home/home.component';
 import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
 import { AdminpanelComponent } from './views/adminpanel/adminpanel.component';
-import { ChartLineComponent } from './views/chart-line/chart-line.component';
-import { AuthGuard } from './auth.guard'; // Importar la guarda de rutas
-import { ApplicationConfig } from '@angular/core';
-import { provideRouter, withDebugTracing } from '@angular/router';
-import { TestComponent } from './views/test/test.component';
-import { RegistroConsultoresComponent } from './registro-consultores/registro-consultores.component';
+import { CustomerpanelComponent } from './views/customerpanel/customerpanel.component';
+import { AboutComponent } from './views/about/about.component';
+import { ResourcefileComponent } from './views/resourcefile/resourcefile.component';
+import { AuthGuard } from './guards/auth.guard'; // Importa el guard
 
 
 export const routes: Routes = [
-  { path: '', component: HomeComponent },        // Ruta para la página principal
-  { path: 'login', component: LoginComponent },  // Ruta para la página de login
-  { path: 'register', component: RegisterComponent },  // Ruta para la página de registro
-  { path: 'admin', component: AdminpanelComponent, canActivate: [AuthGuard] }, // Proteger la ruta con la guarda de rutas
-  { path: 'graphic', component: ChartLineComponent },    // Ruta para el componente de gráfico
-  { path: 'test', component: TestComponent, canActivate: [AuthGuard]}, 
-  { path: 'register-consultores', component: RegistroConsultoresComponent}
+    {
+        path: '',
+        redirectTo: '/home',
+        pathMatch: 'full'
+    },
+    {
+        path: 'home',
+        component: HomeComponent
+    },
+    {
+        path: 'login',
+        component: LoginComponent
+    },
+    {
+        path: 'register',
+        component: RegisterComponent
+    },
+    {
+        path: 'admin',
+        component: AdminpanelComponent,
+        canActivate: [AuthGuard] // Aplica el guard
+    },
+    {
+        path: 'customer',
+        component: CustomerpanelComponent,
+        canActivate: [AuthGuard] // Aplica el guard
+    },
+    {
+        path: 'about',
+        component: AboutComponent
+    },
+    {
+        path: 'resourcefile',
+        component: ResourcefileComponent
+    },
   
+    // Puedes agregar más rutas según sea necesario
 ];
-
-
-export const appConfig: ApplicationConfig = {
-  providers: [provideRouter(routes, withDebugTracing())]
-};

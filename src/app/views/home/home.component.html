@@ -1,99 +1,129 @@
 
-<section >
-  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
-    <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-              <!-- Video insertado aquí -->
-              <div class="embed-responsive embed-responsive-16by9">
-                <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/emo0kUa993U?si=z0_q-cHP7LA14GaX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Metodología EstraMyPyme</h5>
-              <p>Evaluando para mejorar estrategias empresariales.</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-           <!-- Imagen insertada en el segundo slide -->
-           <img src="assets/img/slide1.png" class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="550" alt="Slide 2">
-           <div class="carousel-caption d-none d-md-block">
-             <h5>Herramienta</h5>
-              <p>Para una visión integral del negocio.</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-             <!-- Imagen insertada en el tercer slide -->
-             <img src="assets/img/slide2.png" class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="550" alt="Slide 2">
-             <div class="carousel-caption d-none d-md-block">
-               <h5>Integración y Colaboración</h5>
-               <p>Herramientas efectivas para tu empresa o emprendimiento.</p>
-            </div>
-          </div>
+<app-navbar></app-navbar>
+
+<div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="bd-placeholder-img" width="100%" height="100%" src="img/home/slide1.jpg" aria-hidden="true" >
+     
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>Transforme su Estrategia Empresarial</h1>
+          <p class="opacity-60">Con nuestra plataforma, aproveche herramientas basadas en el libro "EstraMyPyme" para mejorar la gestión y el rendimiento de su empresa.</p>
+          <p><a class="btn btn-lg btn-primary" href="/register" >Regístrese ahora</a></p>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
       </div>
+    </div>
+    <div class="carousel-item">
+      <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>Una Solución Integral para su Empresa</h1>
+          <p>Acceda a análisis detallados y gráficos de sus resultados para tomar decisiones informadas y estratégicas.</p>
+          <p><a class="btn btn-lg btn-primary" href="#">Descubra más</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>Optimice su Estrategia Empresarial</h1>
+          <p>Explore nuestras herramientas y optimice el desempeño de su empresa con insights precisos y gráficos dinámicos.</p>
+          <p><a class="btn btn-lg btn-primary" href="#">Explorar la galería</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Anterior</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Siguiente</span>
+  </button>
+</div>
 
-</section>
+<!-- Marketing messaging and featurettes -->
+<div class="container marketing">
 
-<div class="container">
+  <!-- Three columns of text below the carousel -->
   <div class="row">
-      <div class="col-md-8 offset-md-2">
-          <h1 class="text-center mt-5 mb-4 informativo">Plataforma de EstraMyPyme</h1>
-      </div>
+    <div class="col-lg-4">
+      <div class="features-two__card__icon-box">
+        <span class="features-two__card__icon"><i class="fas fa-tasks"></i></span>
+    </div>
+      <h2 class="fw-normal">Evaluación Completa</h2>
+      <p>Realice evaluaciones exhaustivas con base en el contenido del libro "EstraMyPyme" y obtenga resultados precisos para su empresa.</p>
+      <p><a class="btn btn-outline-dark shadow-sm" href="#">Ver detalles &raquo;</a></p>
+    </div>
+    <div class="col-lg-4">
+      <div class="features-two__card__icon-box">
+        <span class="features-two__card__icon"><i class="fas fa-chart-line"></i></span>
+    </div>
+      <h2 class="fw-normal">Gráficas Dinámicas</h2>
+      <p>Visualice sus resultados a través de gráficos interactivos que facilitan la interpretación de datos y la toma de decisiones.</p>
+      <p><a class="btn btn-outline-dark shadow-sm" href="#">Ver detalles &raquo;</a></p>
+    </div>
+    <div class="col-lg-4">
+      <div class="features-two__card__icon-box">
+        <span class="features-two__card__icon"><i class="fas fa-cogs"></i></span>
+    </div>
+      <h2 class="fw-normal">Panel de Administración</h2>
+      <p>Administre y visualice todos los registros y resultados de las pruebas en un panel de control fácil de usar.</p><br>
+      <p><a class="btn btn-outline-dark shadow-sm" href="#">Ver detalles &raquo;</a></p>
+    </div>
   </div>
-  <div class="container">
-    <div class="row">
-      <!-- Columna para el objetivo general -->
-      <div class="col-md-4">
-        <div class="card mb-4">
-          <img src="assets/img/banner1.png" class="card-img-top" alt="Objetivo">
-          <div class="card-body">
-            <h4 class="card-title mb-3">Objetivo</h4>
-            <p class="card-text ">
-              Bienvenido a nuestra plataforma diseñada para ofrecerte herramientas efectivas basadas en el libro "EstraMyPyme" de la editorial EAFit. Nuestro objetivo es ayudar a individuos y empresas a evaluar y mejorar sus estrategias empresariales de manera interactiva y personalizada.
-            </p>
-            <a href="#" class="btn btn-primary ">Más información</a>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Columna para Registro y Identificación -->
-      <div class="col-md-4">
-        <div class="card mb-4">
-          <img src="assets/img/banner2.png" class="card-img-top" alt="Registro e Identificación">
-          <div class="card-body">
-            <h4 class="card-title mb-3">Registro e Identificación</h4>
-            <p class="card-text">
-              Regístrate en nuestra plataforma como persona natural o jurídica. Proporciona información detallada como nombre, tipo de empresa (pequeña, mediana, grande u otros), y sector al que perteneces. Si eres una empresa, también puedes ingresar tu razón social.
-            </p>
-            <a href="/register" class="btn btn-primary">Registrarse</a>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Columna para Panel de Administración -->
-      <div class="col-md-4">
-        <div class="card mb-4">
-          <img src="assets/img/banner3.png" class="card-img-top" alt="Panel de Administración">
-          <div class="card-body">
-            <h4 class="card-title mb-3">Panel de Administración</h4>
-            <p class="card-text">
-              Nuestro panel de administración ofrece una visión completa de los registros y resultados de las pruebas diagnósticas. Presentamos gráficas y datos relevantes para facilitar la interpretación y la toma de decisiones estratégicas que además permiten el seguimiento del proceso.
-            </p>
-            <a href="/login" class="btn btn-primary">Acceder al panel</a>
-          </div>
-        </div>
+
+  <!-- START THE FEATURETTES -->
+
+  <hr class="featurette-divider">
+
+  <div class="row featurette">
+    <div class="col-md-7">
+      <h2 class="featurette-heading fw-normal lh-1">Una herramienta que transforma su negocio.<br> <span class="text-body-secondary">Mejore su estrategia hoy.</span></h2>
+      <p class="lead">Nuestra plataforma le ofrece un análisis profundo basado en el libro "EstraMyPyme", con herramientas para mejorar el desempeño de su empresa.</p>
+    </div>
+    <div class="col-md-5">
+      <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="img/home/img-18.png" width="500" height="500">
+    
+     
+    </div>
+  </div>
+
+  <hr class="featurette-divider">
+
+  <div class="row featurette">
+    <div class="col-md-7 order-md-2">
+      <h2 class="featurette-heading fw-normal lh-1">Optimización garantizada. <br> <span class="text-body-secondary">Vea los resultados.</span></h2>
+      <p class="lead">Experimente cómo nuestras herramientas le proporcionan análisis detallados y gráficos para una mejor toma de decisiones.</p>
+    </div>
+    <div class="col-md-5 order-md-1">
+      <div class="ratio ratio-1x1">
+        <iframe class="shadow rounded" src="https://www.youtube.com/embed/emo0kUa993U?si=z0_q-cHP7LA14GaX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
     </div>
   </div>
+
+  <hr class="featurette-divider">
+
+  <div class="row featurette">
+    <div class="col-md-7">
+      <h2 class="featurette-heading fw-normal lh-1">La solución definitiva. <br><span class="text-body-secondary">Impulsando su éxito.</span></h2>
+      <p class="lead">Descubra cómo nuestra plataforma puede transformar su empresa y llevarla a un nuevo nivel de rendimiento y éxito.</p>
+    </div>
+    <div class="col-md-5">
+      <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="img/home/img-03.png" width="500" height="500">
+    </div>
+  </div>
+  <!-- /END THE FEATURETTES -->
+</div>
+
+
+  <app-footer></app-footer>

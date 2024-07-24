@@ -1,32 +1,53 @@
-import { Component } from '@angular/core';
-import Swal from 'sweetalert2';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthService } from '../../auth.service';
+import Swal from 'sweetalert2';
+import { AuthService } from '../../services/auth.service';
+import { NavbarComponent } from "../../components/navbar/navbar.component";
+import { FooterComponent } from "../../components/footer/footer.component";
 
 @Component({
   selector: 'app-login',
+  standalone: true,
+  imports: [NavbarComponent, FooterComponent],
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent {
-  constructor(private router: Router, private authService: AuthService) {}
+export class LoginComponent implements OnInit {
 
-  validarInicioSesion() {
-    const correo = (document.getElementById("correoLogin") as HTMLInputElement).value;
-    const contrasena = (document.getElementById("contrasenaLogin") as HTMLInputElement).value;
+  constructor(private authService: AuthService, private router: Router) {}
 
-    if (this.authService.login(correo, contrasena)) {
-      this.router.navigate(['/admin']);
-      
-    } else { 
+  ngOnInit() {
+    const loginButton = document.getElementById('loginButton');
+    if (loginButton) {
+      loginButton.addEventListener('click', () => this.handleLogin());
+    }
+
+ 
+  }
+
+  handleLogin() {
+    const userType = (document.getElementById('userType') as HTMLSelectElement).value;
+    const email = (document.getElementById('email') as HTMLInputElement).value;
+    const password = (document.getElementById('password') as HTMLInputElement).value;
+
+    if (this.authService.login(userType, email, password)) {
+      this.redirectBasedOnUserType();
+    } else {
       Swal.fire({
         icon: 'error',
-        title: 'Error de inicio de sesión',
-        text: 'Correo o contraseña incorrectos. Por favor, inténtelo nuevamente.',
-        showConfirmButton: true,
-        confirmButtonText: 'Aceptar',
+        title: 'Credenciales inválidas',
+        text: 'El email o la contraseña son incorrectos.'
       });
     }
-    
+  }
+
+  private redirectBasedOnUserType() {
+    const userType = (document.getElementById('userType') as HTMLSelectElement).value;
+    if (userType === 'Administrador') {
+      this.router.navigate(['/admin']);
+    } 
+    if (userType === 'Empresa') {
+      this.router.navigate(['/customer']);
+    }
   }
 }
