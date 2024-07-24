@@ -1,127 +1,7 @@
 <div class="wrapper">
-    <aside id="sidebar" class="js-sidebar shadow">
-        <!-- Content For Sidebar -->
-        <div class="h-100">
-            <div class="sidebar-logo">
-              <img class="logo responsive" src="img/Logo.svg" alt="Universidad EAFIT" height="45">
-            </div>
-            <ul class="sidebar-nav">
-                <li class="sidebar-header">
-                     Elementos Admin
-                </li>
-                <li class="sidebar-item">
-                    <a href="/admin" class="sidebar-link">
-                        <i class="fa-solid fa-tachometer-alt pe-2"></i>
-                        Dashboard
-                    </a>
-                </li>
-               
-                <li class="sidebar-item">
-                    <a href="#" class="sidebar-link collapsed" data-bs-target="#registros" data-bs-toggle="collapse"
-                        aria-expanded="false"><i class="fa-solid fa-clipboard-list pe-2"></i>
-                        Registros
-                    </a>
-                    <ul id="registros" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
-                        <li class="sidebar-item">
-                            <a href="#" class="sidebar-link">Ver Registros</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="sidebar-item">
-                    <a href="#" class="sidebar-link collapsed" data-bs-target="#pruebas" data-bs-toggle="collapse"
-                        aria-expanded="false"><i class="fa-solid fa-chart-bar pe-2"></i>
-                        Pruebas Diagnósticas
-                    </a>
-                    <ul id="pruebas" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
-                        <li class="sidebar-item">
-                            <a href="#" class="sidebar-link">Ver Resultados</a>
-                        </li>
-                        <li class="sidebar-item">
-                            <a href="#" class="sidebar-link">Agregar Prueba</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="sidebar-item">
-                    <a href="#" class="sidebar-link collapsed" data-bs-target="#consultores" data-bs-toggle="collapse"
-                        aria-expanded="false"><i class="fa-solid fa-users pe-2"></i>
-                        Consultores
-                    </a>
-                    <ul id="consultores" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
-                        <li class="sidebar-item">
-                            <a href="#" class="sidebar-link">Ver Consultores</a>
-                        </li>
-                        <li class="sidebar-item">
-                            <a href="#" class="sidebar-link">Agregar Consultor</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="sidebar-item">
-                    <a href="#" class="sidebar-link collapsed" data-bs-target="#reportes" data-bs-toggle="collapse"
-                        aria-expanded="false"><i class="fa-solid fa-file-alt pe-2"></i>
-                        Reportes
-                    </a>
-                    <ul id="reportes" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
-                        <li class="sidebar-item">
-                            <a href="#" class="sidebar-link">Generar Reporte</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="sidebar-header">
-                    Seguridad
-                </li>
-                <li class="sidebar-item">
-                    <a href="#" class="sidebar-link collapsed" data-bs-target="#usuarios" data-bs-toggle="collapse"
-                        aria-expanded="false"><i class="fa-solid fa-user-plus pe-2"></i>
-                        Usuarios
-                    </a>
-                    <ul id="usuarios" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
-                        <li class="sidebar-item">
-                            <a href="#" class="sidebar-link">Lista de Usuarios</a>
-                        </li>
-                        <li class="sidebar-item">
-                            <a href="#" class="sidebar-link">Agregar Usuario</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="sidebar-item">
-                    <a href="#" class="sidebar-link collapsed" data-bs-target="#configuracion" data-bs-toggle="collapse"
-                        aria-expanded="false"><i class="fa-solid fa-cogs pe-2"></i>
-                        Configuración
-                    </a>
-                    <ul id="configuracion" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
-                        <li class="sidebar-item">
-                            <a href="#" class="sidebar-link">Perfil</a>
-                        </li>
-                        <li class="sidebar-item">
-                            <a href="#" class="sidebar-link">Seguridad</a>
-                        </li>
-                    </ul>
-                </li>
-                
-            </ul>
-        </div>
-    </aside>
+   <app-adminsidebar></app-adminsidebar>
     <div class="main">
-        <nav class="navbar navbar-expand px-3 border-bottom shadow-sm">
-            <button class="btn" id="sidebar-toggle" type="button">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="navbar-collapse navbar">
-                <ul class="navbar-nav">
-                    <li class="nav-item dropdown">
-                        <a href="#" data-bs-toggle="dropdown" class="nav-icon pe-md-0">
-                            <img src="img/panel/user.png" class="avatar img-fluid rounded" alt="">
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-end">
-                            <a href="#" class="dropdown-item">Perfil</a>
-                            <a href="#" class="dropdown-item">Configuración</a>
-                            <hr>
-                            <a class="dropdown-item" (click)="handleLogout()">Cerrar Sesión</a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+       <app-adminnavbar></app-adminnavbar>
         <main class="content px-3 py-2">
             <div class="container-fluid">
                 <div class="mb-3">
@@ -170,27 +50,7 @@
                 </div>
             </div>
         </main>
-        <footer class="footer">
-            <div class="container-fluid">
-                <div class="row text-muted">
-                    <div class="col-6 text-start">
-                        <p class="mb-0">
-                            <a href="#" class="text-muted">
-                                <strong>Eafit Editorial</strong>
-                            </a>
-                        </p>
-                    </div>
-                    <div class="col-6 text-end">
-                        <ul class="list-inline">
-                           
-                            <li class="list-inline-item">
-                                <a href="#" class="text-muted">&copy; 2024 Todos los Derechos Reservados</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </footer>
+      <app-adminfooter></app-adminfooter>
     </div>
   </div>
   

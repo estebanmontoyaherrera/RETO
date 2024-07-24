@@ -1,6 +1,9 @@
 import { Component, Renderer2, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
+import { AdminsidebarComponent } from "../../components/adminsidebar/adminsidebar.component";
+import { AdminnavbarComponent } from "../../components/adminnavbar/adminnavbar.component";
+import { AdminfooterComponent } from "../../components/adminfooter/adminfooter.component";
 
 
 @Component({
@@ -8,6 +11,7 @@ import { AuthService } from '../../services/auth.service';
   standalone: true,  
   templateUrl: './adminpanel.component.html',
   styleUrl: './adminpanel.component.css',
+  imports: [AdminsidebarComponent, AdminnavbarComponent, AdminfooterComponent],
   
 })
 export class AdminpanelComponent implements OnInit{
