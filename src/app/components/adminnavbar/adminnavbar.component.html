@@ -9,11 +9,14 @@
                     <img src="img/panel/user.png" class="avatar img-fluid rounded" alt="">
                 </a>
                 <div class="dropdown-menu dropdown-menu-end">
-                    <a href="#" class="dropdown-item">Perfil</a>
-                    <a href="#" class="dropdown-item">Configuración</a>
+                    <a href="#" class="dropdown-item">
+                    {{ userEmail }}
+                    </a>
                     <hr>
-                    <a class="dropdown-item" >Cerrar Sesión</a>
-                </div>
+                    <a class="dropdown-item" (click)="handleLogout()">
+                      <i class="fa-solid fa-sign-out-alt pe-2"></i> Cerrar Sesión
+                    </a>
+                  </div>
             </li>
         </ul>
     </div>
