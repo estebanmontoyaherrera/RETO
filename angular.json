@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "FRONTED": {
+    "ESTRAMIPYME": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/fronted",
+            "outputPath": "dist/estramipyme",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -23,21 +23,18 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public",
-                "output": "/assets/"
+                "input": "public"
               }
             ],
             "styles": [
-              "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
+              "node_modules/bootstrap/dist/css/bootstrap.css",
               "src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.css"
-             
+              "node_modules/@fortawesome/fontawesome-free/css/all.min.css"
             ],
             "scripts": [
-              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
               "node_modules/@popperjs/core/dist/umd/popper.min.js",
-              "node_modules/sweetalert2/dist/sweetalert2.all.min.js"
-             
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+
             ]
           },
           "configurations": {
@@ -68,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "FRONTED:build:production"
+              "buildTarget": "ESTRAMIPYME:build:production"
             },
             "development": {
-              "buildTarget": "FRONTED:build:development"
+              "buildTarget": "ESTRAMIPYME:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -101,8 +98,5 @@
         }
       }
     }
-  },
-  "cli": {
-    "analytics": "7e66c142-a6b5-4a0f-9b7d-ab5bf9e135ec"
   }
 }

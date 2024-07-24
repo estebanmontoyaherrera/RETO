@@ -1,111 +1,114 @@
-import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import Swal from 'sweetalert2';
-import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { NavbarComponent } from "../../components/navbar/navbar.component";
+import { FooterComponent } from "../../components/footer/footer.component";
+import { CommonModule } from '@angular/common';
+
 @Component({
   selector: 'app-register',
   standalone: true,
-  imports: [ReactiveFormsModule, CommonModule],
+  imports: [CommonModule, NavbarComponent, FooterComponent],
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent {
-  registroForm = new FormGroup({
-    tipoPersona: new FormControl('', Validators.required),
-    nombre: new FormControl('', Validators.required),
-    tipoEmpresa: new FormControl(''),
-    sector: new FormControl(''),
-    razonSocial: new FormControl(''),
-    correo: new FormControl('', [Validators.required, Validators.email]),
-    contrasena: new FormControl('', Validators.required)
-  });
+  personType: string = '';
 
-  onSubmit() {
-    if (this.registroForm.valid) {
-      const formValue = this.registroForm.value;
-      localStorage.setItem('registro', JSON.stringify(formValue));
-      Swal.fire({
-        icon: 'success',
-        title: '¡Registro exitoso!',
-        text: 'Te has registrado correctamente.',
-        showConfirmButton: true,
-        confirmButtonText: 'Aceptar',
-      });
-    } else {
-      Swal.fire({
-        icon: 'error',
-        title: 'Error',
-        text: 'Por favor, completa todos los campos requeridos.',
-        showConfirmButton: true,
-        confirmButtonText: 'Aceptar',
-      });
-    }
+  constructor(private router: Router) {}
+
+  onPersonTypeChange(event: Event) {
+    const selectElement = event.target as HTMLSelectElement;
+    this.personType = selectElement.value;
   }
 
-  validarFormulario() {
-    const tipoPersona = (document.getElementById("tipoPersona") as HTMLSelectElement).value;
-    const nombre = (document.getElementById("nombre") as HTMLInputElement).value;
-    const tipoEmpresa = (document.getElementById("tipoEmpresa") as HTMLSelectElement).value;
-    const sector = (document.getElementById("sector") as HTMLInputElement).value;
-    const razonSocial = (document.getElementById("razonSocial") as HTMLInputElement).value;
-    const correo = (document.getElementById("correo") as HTMLInputElement).value;
-    const contrasena = (document.getElementById("contrasena") as HTMLInputElement).value;
+  onSubmit(event: Event) {
+    event.preventDefault();
 
-    if (!tipoPersona) {
-      Swal.fire({
-        icon: 'error',
-        title: 'Error',
-        text: 'Por favor, selecciona el tipo de persona.',
-        showConfirmButton: true,
-        confirmButtonText: 'Aceptar',
-      });
-      return false;
-    }
+    // Obtener los valores de los campos del formulario
+    const documentValue: string = (document.getElementById('floatingDocument') as HTMLInputElement)?.value;
+    const name: string = (document.getElementById('floatingName') as HTMLInputElement)?.value;
+    const legalName: string = (document.getElementById('floatingLegalName') as HTMLInputElement)?.value;
+    const companyType: string = (document.getElementById('floatingCompanyType') as HTMLSelectElement)?.value;
+    const sector: string = (document.getElementById('floatingSector') as HTMLInputElement)?.value;
+    const email: string = (document.getElementById('floatingEmail') as HTMLInputElement)?.value;
+    const password: string = (document.getElementById('floatingPassword') as HTMLInputElement)?.value;
+    const repeatPassword: string = (document.getElementById('floatingRepeatPassword') as HTMLInputElement)?.value;
 
-    if (!nombre) {
-      Swal.fire({
-        icon: 'error',
-        title: 'Error',
-        text: 'Por favor, ingrese su nombre.',
-        showConfirmButton: true,
-        confirmButtonText: 'Aceptar',
-      });
-      return false;
-    }
-   
-    if (!correo) {
-      Swal.fire({
-        icon: 'error',
-        title: 'Error',
-        text: 'Por favor, ingrese su correo electrónico.',
-        showConfirmButton: true,
-        confirmButtonText: 'Aceptar',
-      });
-      return false;
-    }
-    if (!contrasena) {
-      Swal.fire({
-        icon: 'error',
-        title: 'Error',
-        text: 'Por favor, ingrese su contraseña.',
-        showConfirmButton: true,
-        confirmButtonText: 'Aceptar',
-      });
-      return false;
+    // Validaciones basadas en el tipo de persona
+    if (!this.personType || this.personType === 'Selecciona un tipo') {
+      Swal.fire('Error', 'Por favor selecciona un tipo de persona', 'error');
+      return;
     }
 
-    return true;
-  }
-
-  showSuccessAlert() {
-    if (this.validarFormulario()) {
-      Swal.fire({
-        icon: 'success',
-        title: '¡Registro exitoso!',
-        text: 'Te has registrado correctamente.',
-        showConfirmButton: true,
-        confirmButtonText: 'Aceptar',
-      });
+    if (!documentValue) {
+      Swal.fire('Error', 'Por favor ingresa tu Nit o Documento', 'error');
+      return;
     }
+
+    if (this.personType === 'Natural') {
+      if (!name) {
+        Swal.fire('Error', 'Por favor ingresa tu nombre', 'error');
+        return;
+      }
+      if (!sector) {
+        Swal.fire('Error', 'Por favor ingresa el sector', 'error');
+        return;
+      }
+    }
+
+    if (this.personType === 'Jurídica') {
+      if (!legalName) {
+        Swal.fire('Error', 'Por favor ingresa la razón social', 'error');
+        return;
+      }
+      if (!companyType || companyType === 'Selecciona un tipo') {
+        Swal.fire('Error', 'Por favor selecciona un tipo de empresa', 'error');
+        return;
+      }
+      if (!sector) {
+        Swal.fire('Error', 'Por favor ingresa el sector', 'error');
+        return;
+      }
+    }
+
+    if (!email) {
+      Swal.fire('Error', 'Por favor ingresa tu email', 'error');
+      return;
+    }
+
+    if (!password) {
+      Swal.fire('Error', 'Por favor ingresa tu contraseña', 'error');
+      return;
+    }
+
+    if (password !== repeatPassword) {
+      Swal.fire('Error', 'Las contraseñas no coinciden', 'error');
+      return;
+    }
+
+    // Crear el objeto de datos del usuario
+    const userData = {
+      personType: this.personType,
+      document: documentValue,
+      name: this.personType === 'Natural' ? name : '',
+      legalName: this.personType === 'Jurídica' ? legalName : '',
+      companyType: this.personType === 'Jurídica' ? companyType : '',
+      sector,
+      email,
+      password
+    };
+
+    // Recuperar los usuarios existentes desde localStorage
+    const users = JSON.parse(localStorage.getItem('users') || '[]');
+    // Agregar el nuevo usuario a la lista
+    users.push(userData);
+    // Guardar la lista actualizada en localStorage
+    localStorage.setItem('users', JSON.stringify(users));
+
+    // Mostrar mensaje de éxito y redirigir
+    Swal.fire('Éxito', 'Registro guardado en localStorage', 'success').then(() => {
+      this.router.navigate(['/login']);
+    });
   }
 }
