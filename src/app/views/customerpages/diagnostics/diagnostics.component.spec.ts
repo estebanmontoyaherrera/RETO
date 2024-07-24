@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ResourcefileComponent } from './resourcefile.component';
+import { DiagnosticsComponent } from './diagnostics.component';
 
-describe('ResourcefileComponent', () => {
-  let component: ResourcefileComponent;
-  let fixture: ComponentFixture<ResourcefileComponent>;
+describe('DiagnosticsComponent', () => {
+  let component: DiagnosticsComponent;
+  let fixture: ComponentFixture<DiagnosticsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ResourcefileComponent]
+      imports: [DiagnosticsComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ResourcefileComponent);
+    fixture = TestBed.createComponent(DiagnosticsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,0 +1,78 @@
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.875rem;
+    opacity: 1;
+    overflow-y: scroll;
+    margin: 0;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+h4 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.275rem;
+    color: var(--bs-emphasis-color);
+}
+
+/* Layout for admin dashboard skeleton */
+
+.wrapper {
+    align-items: stretch;
+    display: flex;
+    width: 100%;
+}
+
+.content {
+    flex: 1;
+    max-width: 100vw;
+    width: 100vw;
+}
+
+@media (min-width:768px) {
+    .content {
+        max-width: auto;
+        width: auto;
+    }
+}
+
+.card {
+    box-shadow: 0 0 .875rem 0 rgba(34, 46, 60, .05);
+    margin-bottom: 24px;
+}
+
+.illustration {
+    background-color: var(--bs-primary-bg-subtle);
+    color: var(--bs-emphasis-color);
+}
+
+.illustration-img {
+    max-width: 150px;
+    width: 100%;
+}
+
+
+.main {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-width: 0;
+    overflow: hidden;
+    transition: all 0.35s ease-in-out;
+    width: 100%;
+    background:#fafafa;
+}
+
