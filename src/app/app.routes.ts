@@ -15,6 +15,8 @@ import { PerformtestComponent } from './views/customerpages/performtest/performt
 
 
 
+
+
 export const routes: Routes = [
     {
         path: '',
@@ -69,6 +71,6 @@ export const routes: Routes = [
     component: PerformtestComponent,
     canActivate: [AuthGuard] // Aplica el guard
    },
-
+ 
     // Puedes agregar más rutas según sea necesario
 ];

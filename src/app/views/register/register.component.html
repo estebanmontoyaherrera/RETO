@@ -26,15 +26,12 @@
                 </div>
                 <div class="form-floating mb-3">
                     <input type="text" class="form-control form-control-sm shadow-sm" id="floatingDocument" placeholder="Nit o Documento">
-                    <label for="floatingName">Nit o Documento</label>
+                    <label for="floatingDocument">Nit o Documento</label>
                 </div>
-                <div class="form-floating mb-3" [hidden]="personType === 'Jurídica'">
-                    <input type="text" class="form-control form-control-sm shadow-sm" id="floatingName" placeholder="Nombre Completo">
-                    <label for="floatingName">Nombre</label>
-                </div>
-                <div class="form-floating mb-3" [hidden]="personType !== 'Jurídica'">
-                    <input type="text" class="form-control form-control-sm shadow-sm" id="floatingLegalName" placeholder="Razón Social">
-                    <label for="floatingLegalName">Razón Social</label>
+                
+                <div class="form-floating mb-3" >
+                    <input type="text" class="form-control form-control-sm shadow-sm" id="floatingLegalName" placeholder="Nombre o Razón Social" >
+                    <label for="floatingLegalName">Nombre o Razón Social</label>
                 </div>
                 <div class="form-floating mb-3" [hidden]="personType !== 'Jurídica'">
                     <select class="form-select form-select-sm shadow-sm" id="floatingCompanyType" aria-label="Tipo de empresa">

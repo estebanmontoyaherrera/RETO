@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
   selector: 'app-register',
   standalone: true,
   imports: [CommonModule, NavbarComponent, FooterComponent],
-  templateUrl: './register.component.html',
+  templateUrl:'./register.component.html',
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent {
@@ -26,8 +26,7 @@ export class RegisterComponent {
     event.preventDefault();
 
     // Obtener los valores de los campos del formulario
-    const documentValue: string = (document.getElementById('floatingDocument') as HTMLInputElement)?.value;
-    const name: string = (document.getElementById('floatingName') as HTMLInputElement)?.value;
+    const documentValue: string = (document.getElementById('floatingDocument') as HTMLInputElement)?.value;   
     const legalName: string = (document.getElementById('floatingLegalName') as HTMLInputElement)?.value;
     const companyType: string = (document.getElementById('floatingCompanyType') as HTMLSelectElement)?.value;
     const sector: string = (document.getElementById('floatingSector') as HTMLInputElement)?.value;
@@ -47,7 +46,7 @@ export class RegisterComponent {
     }
 
     if (this.personType === 'Natural') {
-      if (!name) {
+      if (!legalName) {
         Swal.fire('Error', 'Por favor ingresa tu nombre', 'error');
         return;
       }
@@ -90,9 +89,8 @@ export class RegisterComponent {
     // Crear el objeto de datos del usuario
     const userData = {
       personType: this.personType,
-      document: documentValue,
-      name: this.personType === 'Natural' ? name : '',
-      legalName: this.personType === 'Jurídica' ? legalName : '',
+      document: documentValue,      
+      legalName,
       companyType: this.personType === 'Jurídica' ? companyType : '',
       sector,
       email,
