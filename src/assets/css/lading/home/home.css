@@ -1,0 +1,121 @@
+/* GLOBAL STYLES */
+body {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    color: rgb(var(--bs-tertiary-color-rgb));
+  }
+  
+  /* CUSTOMIZE THE CAROUSEL */
+  .carousel {
+    margin-bottom: 4rem;
+  }
+  .carousel-caption {
+    bottom: 3rem;
+    z-index: 10;
+  }
+  
+  .carousel-caption h1, .carousel-caption h2 {
+    color: #fff; /* White text color */
+    font-size: 3rem; /* Adjust the size as necessary */
+    font-weight: bold; /* Bold text */
+  }
+  
+  /* RESPONSIVE CSS */
+  @media (min-width: 40em) {
+    .carousel-caption p {
+      margin-bottom: 1.25rem;
+      font-size: 1.25rem;
+      line-height: 1.4;
+    }
+  
+    .featurette-heading {
+      font-size: 50px;
+    }
+  }
+  
+  @media (min-width: 62em) {
+    .featurette-heading {
+      margin-top: 7rem;
+    }
+  }
+  
+  /* Mobile-specific styling */
+  @media (max-width: 39.99em) {
+    .carousel-item {
+      height: 20rem; /* Adjusted height for mobile devices */
+    }
+  
+    .carousel-caption h1 {
+      font-size: 1.5rem; /* Smaller font size for h1 on mobile */
+    }
+  
+    .carousel-caption h2 {
+      font-size: 1.25rem; /* Smaller font size for h2 on mobile */
+    }
+  }
+  
+  /*end responsive carousel*/
+  
+  .carousel-item img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* MARKETING CONTENT */
+  .marketing .col-lg-4 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  .marketing .col-lg-4 p {
+    margin-right: .75rem;
+    margin-left: .75rem;
+  }
+  
+  /* Featurettes */
+  .featurette-divider {
+    margin: 5rem 0;
+  }
+  .featurette-heading {
+    letter-spacing: -.05rem;
+  }
+  
+  /* RESPONSIVE CSS */
+  @media (min-width: 40em) {
+    .carousel-caption p {
+      margin-bottom: 1.25rem;
+      font-size: 1.25rem;
+      line-height: 1.4;
+    }
+    .featurette-heading {
+      font-size: 50px;
+    }
+  }
+  
+  @media (min-width: 62em) {
+    .featurette-heading {
+      margin-top: 7rem;
+    }
+  }
+  
+  .features-two__card__icon-box {
+    margin: 0 auto 15px;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    background-color: var(--insuba-white5, #f0f5f5);
+    background: linear-gradient(180deg, transparent 50%, RGBA(var(--insuba-base-rgb, 3, 101, 211), 0.09)) 50%;
+    border-radius: 50%;
+    transition: all 500ms ease;
+  }
+  
+  .features-two__card__icon {
+    display: inline-flex;
+    font-size: 50px;
+    color: var(--insuba-black4, #0f3564);
+    transition: all 500ms ease;
+  }
+  
