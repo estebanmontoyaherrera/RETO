@@ -91,7 +91,7 @@ export class RegisterComponent {
       personType: this.personType,
       document: documentValue,      
       legalName,
-      companyType: this.personType === 'Jurídica' ? companyType : '',
+      companyType: this.personType === 'Jurídica' ? companyType : 'No Aplica',
       sector,
       email,
       password
