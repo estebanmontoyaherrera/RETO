@@ -4,12 +4,12 @@ import { AdminnavbarComponent } from "../../../components/adminnavbar/adminnavba
 import { AdminfooterComponent } from "../../../components/adminfooter/adminfooter.component";
 
 @Component({
-  selector: 'app-report',
+  selector: 'app-dashboaradmin',
   standalone: true,
   imports: [AdminsidebarComponent, AdminnavbarComponent, AdminfooterComponent],
-  templateUrl: './report.component.html',
-  styleUrl: './report.component.css'
+  templateUrl: './dashboaradmin.component.html',
+  styleUrl: './dashboaradmin.component.css'
 })
-export class ReportComponent {
+export class DashboaradminComponent {
 
 }

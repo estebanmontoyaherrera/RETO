@@ -43,10 +43,29 @@
                     </select>
                     <label for="floatingCompanyType">Tipo de Empresa</label>
                 </div>
-               
-                <div class="form-floating mb-3" >
-                    <input type="text" class="form-control form-control-sm shadow-sm" id="floatingSector" placeholder="Sector">
-                    <label for="floatingSector">Sector</label>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control form-control-sm shadow-sm" id="floatingSector" list="sectorOptions" aria-label="Sector económico" placeholder="Sector económico">
+                    <datalist id="sectorOptions">
+                        <option value="Agricultura, Ganadería, Caza y Silvicultura"></option>
+                        <option value="Pesca"></option>
+                        <option value="Minería y Extracción"></option>
+                        <option value="Industria Manufacturera"></option>
+                        <option value="Suministro de Electricidad, Gas y Agua"></option>
+                        <option value="Construcción"></option>
+                        <option value="Comercio al por Mayor y al por Menor"></option>
+                        <option value="Transporte y Almacenamiento"></option>
+                        <option value="Actividades de Alojamiento y Servicios de Comida"></option>
+                        <option value="Información y Comunicaciones"></option>
+                        <option value="Actividades Financieras y de Seguros"></option>
+                        <option value="Actividades Inmobiliarias y de Alquiler"></option>
+                        <option value="Servicios Profesionales, Científicos y Técnicos"></option>
+                        <option value="Administración Pública y Defensa; Seguridad Social Obligatoria"></option>
+                        <option value="Educación"></option>
+                        <option value="Salud Humana y Asistencia Social"></option>
+                        <option value="Actividades Artísticas, de Entretenimiento y Recreativas"></option>
+                        <option value="Otras Actividades de Servicios"></option>
+                    </datalist>
+                    <label for="floatingSector">Sector Económico</label>
                 </div>
                 
                 <div class="form-floating mb-3">

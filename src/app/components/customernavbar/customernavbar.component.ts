@@ -1,4 +1,4 @@
-import { Component,Renderer2, OnInit } from '@angular/core';
+import { Component, Renderer2, OnInit } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
 
 @Component({
@@ -10,11 +10,14 @@ import { AuthService } from '../../services/auth.service';
 })
 export class CustomernavbarComponent implements OnInit {
   userEmail: string | null = null;
+  userLegalName: string | null = null;
 
-  constructor(private renderer: Renderer2,private authService: AuthService) { }
+  constructor(private renderer: Renderer2, private authService: AuthService) { }
 
   ngOnInit(): void {
-    this.userEmail = localStorage.getItem('userEmail'); // Recupera el correo electrónico del usuario
+    this.userEmail = localStorage.getItem('userEmail');
+    this.userLegalName = localStorage.getItem('userLegalName'); // Recupera el nombre legal del usuario
+
     const sidebarToggle = document.querySelector("#sidebar-toggle");
     if (sidebarToggle) {
       sidebarToggle.addEventListener("click", () => {
@@ -61,6 +64,6 @@ export class CustomernavbarComponent implements OnInit {
   }
 
   handleLogout(): void {
-    this.authService.logout(); // Llama al método logout del servicio de autenticación
+    this.authService.logout();
   }
 }

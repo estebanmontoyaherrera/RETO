@@ -4,12 +4,12 @@ import { CustomernavbarComponent } from "../../../components/customernavbar/cust
 import { CustomerfooterComponent } from "../../../components/customerfooter/customerfooter.component";
 
 @Component({
-  selector: 'app-dashboard',
+  selector: 'app-dashboarcustomer',
   standalone: true,
   imports: [CustomersidebarComponent, CustomernavbarComponent, CustomerfooterComponent],
-  templateUrl: './dashboard.component.html',
-  styleUrl: './dashboard.component.css'
+  templateUrl: './dashboarcustomer.component.html',
+  styleUrl: './dashboarcustomer.component.css'
 })
-export class DashboardComponent {
+export class DashboarcustomerComponent {
 
 }
