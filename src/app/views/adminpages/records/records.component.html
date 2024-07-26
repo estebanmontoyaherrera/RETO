@@ -5,18 +5,25 @@
            <main class="content px-3 py-2">
                <div class="container-fluid">
                    <div class="mb-3">
-                       <nav aria-label="breadcrumb">
-                           <ol class="breadcrumb">
-                             <li class="breadcrumb-item"><a href="/admin">Inicio</a></li>
-                             <li class="breadcrumb-item active" aria-current="page"></li>
-                             <li class="breadcrumb-item " aria-current="page"></li>
-                           </ol>
-                         </nav>
+                    <nav aria-label="breadcrumb" class="d-flex justify-content-between align-items-center">
+                        <ol class="breadcrumb mb-0">
+                          <li class="breadcrumb-item"><a href="/admin">Inicio</a></li>
+                          <li class="breadcrumb-item active" aria-current="page">Registros</li>
+                          <li class="breadcrumb-item" aria-current="page">Ver Registros</li>
+                        </ol>
+                        <a href="/" class="btn btn-outline-primary btn-sm shadow-sm">
+                            <i class="bi bi-plus-lg"></i> Añadir Nuevo
+                          </a>
+                      </nav>
+                      
+                      
+                      
                    </div>
                    <div class="row">
                        <!-----Contenido aqui------->
-                       <div class="container mt-4">
+                       <div class="container mt-2">
                         <div class="card shadow-sm">
+                            
                             <div class="card-body">
                                 <div class="table-responsive">
                                     <table id="example" class="table table-striped table-hover" style="width:100%">
