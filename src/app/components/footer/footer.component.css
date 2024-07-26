@@ -1,11 +1,1 @@
-.footer {
-    background-color: #fff;
-    padding: 1rem 0;
-    border-top: 1px solid #ccc;
-    text-align: center;
-  }
-  
-  .footer .text-muted {
-    color: #888;
-  }
-  
+@import url(../../../assets/css/lading/home/home.css);
