@@ -1,16 +1,2 @@
 @import url(../../../../assets/css/admins/main.css);
-/* Establecer el color predeterminado para los iconos */
-.icon-default {
-    color: rgb(71, 71, 71);
-}
-
-/* Estilos para el hover del icono de editar */
-.icon-edit:hover {
-    color: #0ae293; 
-}
-
-/* Estilos para el hover del icono de eliminar */
-.icon-delete:hover {
-    color: red;
-}
-
+@import url(../../../../assets/css/admins/tables/table.css);
