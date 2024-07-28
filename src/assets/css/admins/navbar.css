@@ -25,7 +25,7 @@
 
 .navbar {
     background: #FFF; /* Add this line for white background */
-    color: #000; /* Add this line for black text */
+    color: #12bb1d; /* Add this line for black text */
 }
 
 .navbar a {
@@ -36,4 +36,35 @@
 .avatar {
     height: 38px;
     width: 38px;
+}
+
+/* Define la animación */
+@keyframes slideIn {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Estilo para los enlaces de navegación con la línea animada */
+.nav-link.text-dark {
+    position: relative;
+    display: inline-block;
+}
+
+.nav-link.text-dark::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Ajusta esta propiedad según la distancia deseada del texto */
+    height: 2px; /* Ajusta el grosor de la línea */
+    width: 0;
+    background-color: #F8D300;
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-link.text-dark:hover::after {
+    width: 100%;
 }

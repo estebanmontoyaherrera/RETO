@@ -1,19 +1,19 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
   <div class="container d-flex justify-content-between align-items-center">
-      <button class="navbar-toggler order-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+    <button class="navbar-toggler order-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
       aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation" style="border:0px;box-shadow:none;">
-          <span class="navbar-toggler-icon"></span>
-      </button>
-      
-      <a class="navbar-brand mx-auto order-0" href="#"><img class="logo responsive" src="img/Logo.svg" alt="Universidad EAFIT"></a>
-      <div class="collapse navbar-collapse order-2" id="navbarSupportedContent">
-          <ul class="nav nav-pills ms-auto">
-            <li class="nav-item"><a routerLink="/" class="nav-link text-dark" aria-current="page">Inicio</a></li>
-            <li class="nav-item"><a routerLink="/about" class="nav-link text-dark">Acerca de</a></li>
-            <li class="nav-item"><a routerLink="/register" class="nav-link text-dark">Registro</a></li>            
-            <li class="nav-item me-2 d-none d-sm-block"><a routerLink="/login" class="btn btn-light "><i class="bi bi-person-circle"></i> Inicio Sesión</a></li>
-          </ul>
-      </div>
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <a class="navbar-brand mx-auto order-0" href="#"><img class="logo responsive" src="img/Logo.svg" alt="Universidad EAFIT"></a>
+    <div class="collapse navbar-collapse order-2" id="navbarSupportedContent">
+      <ul class="nav nav-pills ms-auto">
+        <li class="nav-item"><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="nav-link text-dark" aria-current="page">Inicio</a></li>
+        <li class="nav-item"><a routerLink="/about" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="nav-link text-dark">Acerca de</a></li>
+        <li class="nav-item"><a routerLink="/register" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="nav-link text-dark">Registro</a></li>            
+        <li class="nav-item me-2 d-none d-sm-block"><a routerLink="/login" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="btn btn-light"><i class="bi bi-person-circle"></i> Inicio Sesión</a></li>
+      </ul>
+    </div>
   </div>
 </nav>
 
@@ -26,16 +26,16 @@
   <div class="offcanvas-body">
     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
       <li class="nav-item">
-        <a class="nav-link" href="/">Inicio</a>
+        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="nav-link text-dark">Inicio</a>
       </li>
       <li class="nav-item">
-        <a href="/about" class="nav-link text-dark">Acerca de</a>
+        <a routerLink="/about" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="nav-link text-dark">Acerca de</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/register">Registro</a>
+        <a routerLink="/register" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="nav-link text-dark">Registro</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/login">Iniciar sesión </a>
+        <a routerLink="/login" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="nav-link text-dark">Iniciar sesión</a>
       </li>
     </ul>
   </div>

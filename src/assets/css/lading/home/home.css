@@ -1,12 +1,19 @@
+/* Colores corporativos */
+:root {
+  --color-verde: #46C69F;
+  --color-amarillo: #F8D300;
+  --color-negro: #000000;
+  --color-gris: #CFD1D2;
+}
+
 /* GLOBAL STYLES */
 body {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    color: rgb(var(--bs-tertiary-color-rgb));
-  }
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  color: var(--color-negro);
+}
 
-/*CUSTOMIZE THE FOOTER*/
-
+/* CUSTOMIZE THE FOOTER */
 .container-footer {
   max-width: 100%;
   margin: 0 auto;
@@ -65,7 +72,7 @@ body {
 }
 
 .footer-links ul li a:hover {
-  color: #00006D;
+  color: #00A9E0;
   padding-left: 5px;
 }
 
@@ -100,124 +107,194 @@ body {
   transition: background-color 0.3s ease;
 }
 
-
-@media ((min-width: 7px) and (max-width: 9px)){/*Ajusta el footer en la parte de abajo en los mobile*/
-  #foot{
-      top: 148px;
+@media ((min-width: 7px) and (max-width: 9px)) {
+  #foot {
+    top: 148px;
   }
 }
-  
-  /* CUSTOMIZE THE CAROUSEL */
-  .carousel {
-    margin-bottom: 4rem;
+
+/* CUSTOMIZE THE CAROUSEL */
+.carousel {
+  margin-bottom: 4rem;
+}
+
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
+}
+
+.carousel-caption h1 {
+  color: #fff; /* White text color */
+  font-size: 3rem; /* Adjust the size as necessary */
+  font-weight: bold; /* Bold text */
+}
+
+.carousel-caption p {
+  color: #fff; /* White text color */
+}
+
+/* RESPONSIVE CSS */
+/* Ajustes para pantallas medianas (tablets y monitores pequeños) */
+@media (min-width: 40em) {
+  .carousel-caption p {
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
   }
-  .carousel-caption {
-    bottom: 3rem;
-    z-index: 10;
-  }
-  
-  .carousel-caption h1, .carousel-caption h2 {
-    color: #fff; /* White text color */
-    font-size: 3rem; /* Adjust the size as necessary */
-    font-weight: bold; /* Bold text */
-  }
-  
-  /* RESPONSIVE CSS */
-  @media (min-width: 40em) {
-    .carousel-caption p {
-      margin-bottom: 1.25rem;
-      font-size: 1.25rem;
-      line-height: 1.4;
-    }
-  
-    .featurette-heading {
-      font-size: 50px;
-    }
-  }
-  
-  @media (min-width: 62em) {
-    .featurette-heading {
-      margin-top: 7rem;
-    }
-  }
-  
-  /* Mobile-specific styling */
-  @media (max-width: 39.99em) {
-    .carousel-item {
-      height: 20rem; /* Adjusted height for mobile devices */
-    }
-  
-    .carousel-caption h1 {
-      font-size: 1.5rem; /* Smaller font size for h1 on mobile */
-    }
-  
-    .carousel-caption h2 {
-      font-size: 1.25rem; /* Smaller font size for h2 on mobile */
-    }
-  }
-  
-  /*end responsive carousel*/
-  
-  .carousel-item img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-  }
-  
-  /* MARKETING CONTENT */
-  .marketing .col-lg-4 {
-    margin-bottom: 1.5rem;
-    text-align: center;
-  }
-  .marketing .col-lg-4 p {
-    margin-right: .75rem;
-    margin-left: .75rem;
-  }
-  
-  /* Featurettes */
-  .featurette-divider {
-    margin: 5rem 0;
-  }
+
   .featurette-heading {
-    letter-spacing: -.05rem;
+    font-size: 3rem; /* Ajuste para mejor UX en pantallas medianas */
+    margin-bottom: 1rem; /* Espaciado inferior para separar del texto siguiente */
   }
-  
-  /* RESPONSIVE CSS */
-  @media (min-width: 40em) {
-    .carousel-caption p {
-      margin-bottom: 1.25rem;
-      font-size: 1.25rem;
-      line-height: 1.4;
-    }
-    .featurette-heading {
-      font-size: 50px;
-    }
+
+  .lead {
+    font-size: 1.25rem;
+    line-height: 1.4;
+    margin-top: 1rem;
   }
-  
-  @media (min-width: 62em) {
-    .featurette-heading {
-      margin-top: 7rem;
-    }
+}
+
+/* Ajustes para pantallas grandes (monitores grandes y desktops) */
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 7rem;
+    font-size: 50px; /* Tamaño de fuente mayor para pantallas grandes */
   }
-  
-  .features-two__card__icon-box {
-    margin: 0 auto 15px;
-    width: 100px;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    background-color: var(--insuba-white5, #f0f5f5);
-    background: linear-gradient(180deg, transparent 50%, RGBA(var(--insuba-base-rgb, 3, 101, 211), 0.09)) 50%;
-    border-radius: 50%;
-    transition: all 500ms ease;
+}
+
+/* Mobile-specific styling */
+/* Ajustes para pantallas pequeñas (móviles) */
+@media (max-width: 39.99em) {
+  .carousel-item {
+    height: 20rem; /* Altura ajustada para dispositivos móviles */
   }
-  
-  .features-two__card__icon {
-    display: inline-flex;
-    font-size: 50px;
-    color: var(--insuba-black4, #0f3564);
-    transition: all 500ms ease;
+
+  .carousel-caption h1 {
+    font-size: 1.5rem; /* Tamaño de fuente más pequeño para h1 en móviles */
   }
-  
+
+  .carousel-caption p {
+    font-size: 1.25rem; /* Tamaño de fuente más pequeño para p en móviles */
+  }
+
+  .featurette-heading {
+    font-size: 2rem; /* Tamaño de fuente más pequeño para mejor legibilidad en móviles */
+  }
+
+  .lead {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+}
+
+/* end responsive carousel */
+.carousel-item img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* MARKETING CONTENT */
+.marketing .col-lg-4 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.marketing .col-lg-4 p {
+  margin-right: .75rem;
+  margin-left: .75rem;
+}
+
+.fw-normal {
+  color: #00A9E0;
+}
+
+/* Featurettes */
+.featurette-divider {
+  margin: 5rem 0;
+  border-top: 2px solid var(--color-amarillo);
+}
+
+.featurette-heading {
+  letter-spacing: -.05rem;
+  color: #46C69F;
+  font-weight: bold;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.featurette .lead {
+  color: var(--color-negro);
+}
+
+.featurette img {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.featurette iframe {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Animation for heading underline */
+.featurette-heading::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px; /* Adjust the position as needed */
+  height: 2px;
+  width: 0;
+  background-color: #F8D300;
+  transition: width 0.4s ease-in-out;
+}
+
+.featurette-heading:hover::after {
+  width: 100%;
+}
+
+/* Features two card icon box */
+.features-two__card__icon-box {
+  margin: 0 auto 15px;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background-color: var(--insuba-white5, #f0f5f5);
+  background: linear-gradient(180deg, transparent 50%, rgba(3, 101, 211, 0.09)) 50%;
+  border-radius: 50%;
+  transition: all 500ms ease;
+}
+
+.features-two__card__icon {
+  display: inline-flex;
+  font-size: 50px;
+  color: var(--insuba-black4, #0f3564);
+  transition: all 500ms ease;
+}
+
+/* Button styles */
+.btn-outline-light {
+  color: #fff;
+  border-color: #fff;
+}
+
+.btn-outline-light:hover {
+  background-color: #00A9E0;
+  color: #ffffff;
+  border-color: #00A9E0;
+}
+
+.btn-outline-dark {
+  color: #000000;
+  border-color: #000000;
+}
+
+.btn-outline-dark:hover {
+  background-color: #F8D300;
+  color: #ffffff;
+  border-color: #F8D300;
+}

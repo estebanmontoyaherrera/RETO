@@ -1,13 +1,47 @@
+/* Estilos responsivos */
 @media (max-width: 991.98px) {
-    .navbar-brand {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-    }
+  .navbar-brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
   }
+}
 
-  .nav-pills .nav-link.active,
+/* Estilos para los enlaces de navegación activos en nav-pills */
+.nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
   color: var(--bs-nav-pills-link-active-color);
-  background-color:black;
+  background-color: rgb(245, 245, 245);
+}
+
+/* Define la animación */
+@keyframes slideIn {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Estilo para los enlaces de navegación con la línea animada */
+.nav-link.text-dark {
+  position: relative;
+  display: inline-block;
+}
+
+.nav-link.text-dark::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px; /* Ajusta esta propiedad según la distancia deseada del texto */
+  height: 2px; /* Ajusta el grosor de la línea */
+  width: 0;
+  background-color: #F8D300;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-link.text-dark:hover::after,
+.nav-link.text-dark.active::after {
+  width: 100%;
 }
