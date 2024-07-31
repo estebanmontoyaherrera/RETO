@@ -89,3 +89,30 @@ body {
 .lead + .lead {
   margin-top: 10px; /* Adjust this value to increase/decrease the space */
 }
+
+/* Featurette Heading Styles */
+.featurette-heading {
+  position: relative;
+  display: inline-block;
+  font-size: 2rem; /* Adjust the font size as needed */
+  font-weight: bold;
+  color: var #000066;
+  margin-bottom: 1rem; /* Space below the heading */
+  cursor: pointer;
+}
+
+/* Underline Animation */
+.featurette-heading::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px; /* Adjust the position as needed */
+  width: 0;
+  height: 3px; /* Adjust the thickness of the underline */
+  background-color: #6D6E71;
+  transition: width 0.3s ease-in-out;
+}
+
+.featurette-heading:hover::after {
+  width: 100%;
+}
