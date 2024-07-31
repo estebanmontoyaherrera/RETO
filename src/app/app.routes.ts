@@ -3,7 +3,8 @@ import { HomeComponent } from './views/home/home.component';
 import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
 import { AboutComponent } from './views/about/about.component';
-import { AuthGuard } from './guards/auth.guard'; // Importa el guard
+import { AuthGuard } from './guards/auth.guard';
+
 //vistas del panel Admin
 import { DashboaradminComponent } from './views/adminpages/dashboaradmin/dashboaradmin.component';
 import { RecordsComponent } from './views/adminpages/records/records.component';
@@ -14,6 +15,7 @@ import { AddconsultantComponent } from './views/adminpages/addconsultant/addcons
 import { ReportComponent } from './views/adminpages/report/report.component';
 import { AdduserComponent } from './views/adminpages/adduser/adduser.component';
 import { UserlistComponent } from './views/adminpages/userlist/userlist.component';
+
 //vistas del panel Cliente
 import { DashboarcustomerComponent } from './views/customerpages/dashboarcustomer/dashboarcustomer.component';
 import { ConsultingComponent } from './views/customerpages/consulting/consulting.component';
@@ -39,85 +41,82 @@ export const routes: Routes = [
         path: 'register',
         component: RegisterComponent
     },
-  
     {
         path: 'about',
         component: AboutComponent
     },
-   
+
     // Rutas del panel de administración
     {
         path: 'admin',
         component: DashboaradminComponent,
-        canActivate: [AuthGuard] // Aplica el guard
+        canActivate: [AuthGuard]
     },
     {
         path: 'admin/records',
         component: RecordsComponent,
-        canActivate: [AuthGuard] // Aplica el guard
+        canActivate: [AuthGuard]
     },
     {
         path: 'admin/results',
         component: ResultsComponent,
-        canActivate: [AuthGuard] // Aplica el guard
+        canActivate: [AuthGuard]
     },
     {
         path: 'admin/addtest',
         component: AddtestComponent,
-        canActivate: [AuthGuard] // Aplica el guard
+        canActivate: [AuthGuard]
     },
     {
         path: 'admin/consultants',
         component: ConsultantsComponent,
-        canActivate: [AuthGuard] // Aplica el guard
+        canActivate: [AuthGuard]
     },
     {
         path: 'admin/addconsultant',
         component: AddconsultantComponent,
-        canActivate: [AuthGuard] // Aplica el guard
+        canActivate: [AuthGuard]
     },
     {
         path: 'admin/report',
         component: ReportComponent,
-        canActivate: [AuthGuard] // Aplica el guard
+        canActivate: [AuthGuard]
     },
     {
         path: 'admin/adduser',
         component: AdduserComponent,
-        canActivate: [AuthGuard] // Aplica el guard
+        canActivate: [AuthGuard]
     },
     {
         path: 'admin/userlist',
         component: UserlistComponent,
-        canActivate: [AuthGuard] // Aplica el guard
+        canActivate: [AuthGuard]
     },
-   
+
     // Rutas del panel de cliente
     {
         path: 'customer',
         component: DashboarcustomerComponent,
-        canActivate: [AuthGuard] // Aplica el guard
+        canActivate: [AuthGuard]
     },
     {
         path: 'consulting',
         component: ConsultingComponent,
-        canActivate: [AuthGuard] // Aplica el guard
+        canActivate: [AuthGuard]
     },
     {
         path: 'diagnostics',
         component: DiagnosticsComponent,
-        canActivate: [AuthGuard] // Aplica el guard
+        canActivate: [AuthGuard]
     },
     {
         path: 'estramipymebook',
         component: EstramipymebookComponent,
-        canActivate: [AuthGuard] // Aplica el guard
+        canActivate: [AuthGuard]
     },
     {
         path: 'performtest',
         component: PerformtestComponent,
-        canActivate: [AuthGuard] // Aplica el guard
-    },
-
-    // Puedes agregar más rutas según sea necesario
+        canActivate: [AuthGuard]
+    }
 ];
