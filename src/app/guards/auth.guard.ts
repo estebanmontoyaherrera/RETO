@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { CanActivate, Router } from '@angular/router';
+import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
 
 @Injectable({
@@ -8,13 +8,30 @@ import { AuthService } from '../services/auth.service';
 export class AuthGuard implements CanActivate {
 
   constructor(private authService: AuthService, private router: Router) {}
-// Protege las vistas que no estan logueado y lo redirecciona al login
-  canActivate(): boolean {
-    if (this.authService.isAuthenticated()) {
-      return true;
-    } else {
+
+  canActivate(
+    route: ActivatedRouteSnapshot,
+    state: RouterStateSnapshot
+  ): boolean {
+    const isLoggedIn = this.authService.isAuthenticated();
+    const userType = this.authService.getUserType();
+    const routeUrl = state.url;
+
+    if (!isLoggedIn) {
       this.router.navigate(['/login']);
       return false;
     }
+
+    if (routeUrl.startsWith('/admin') && userType !== 'Administrador') {
+      this.router.navigate(['/home']);
+      return false;
+    }
+
+    if (routeUrl.startsWith('/customer') && userType !== 'Empresa') {
+      this.router.navigate(['/home']);
+      return false;
+    }
+
+    return true;
   }
 }
