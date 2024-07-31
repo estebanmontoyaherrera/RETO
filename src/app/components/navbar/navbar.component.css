@@ -37,7 +37,7 @@
   bottom: -2px; /* Ajusta esta propiedad según la distancia deseada del texto */
   height: 2px; /* Ajusta el grosor de la línea */
   width: 0;
-  background-color: #F8D300;
+  background-color: #6D6E71;
   transition: width 0.3s ease-in-out;
 }
 

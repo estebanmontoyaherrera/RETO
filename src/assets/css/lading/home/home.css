@@ -206,11 +206,10 @@ body {
 .marketing .col-lg-4:hover {
   transform: translateY(-10px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  color: #000066;
 }
 
 .fw-normal {
-  color: #00A9E0;
+  color: #000066;
 }
 
 /* Featurettes */
@@ -221,7 +220,7 @@ body {
 
 .featurette-heading {
   letter-spacing: -.05rem;
-  color: #46C69F;
+  color: #000066;
   font-weight: bold;
   position: relative;
   display: inline-block;
@@ -250,7 +249,7 @@ body {
   bottom: -5px; /* Adjust the position as needed */
   height: 2px;
   width: 0;
-  background-color: #F8D300;
+  background-color: #6D6E71;
   transition: width 0.4s ease-in-out;
 }
 
@@ -298,8 +297,8 @@ body {
 }
 
 .btn-outline-dark:hover {
-  background-color: #F8D300;
+  background-color: #00A9E0;
   color: #ffffff;
-  border-color: #F8D300;
+  border-color: #00A9E0;
 }
 
