@@ -75,4 +75,7 @@ h4 {
     width: 100%;
     background:#fafafa;
 }
-
+.scroll-container{
+    height: 600px;
+    overflow-x: auto;
+}
