@@ -29,3 +29,7 @@ function isLight(){
 if(isLight()){
     toggleRootClass();
 }
+
+AOS.init({
+    duration: 1200
+   });
