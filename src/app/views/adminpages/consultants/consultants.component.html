@@ -16,7 +16,11 @@
                    <div class="row">
                        <!-----Contenido aqui------->
                       
-   
+                    <h1>Consultores registrados</h1>
+                    <app-template-consult
+                    *ngFor="let consu of list"
+                    [consult]="consu"
+                    ></app-template-consult>
    
                    </div>
                 
