@@ -30,4 +30,17 @@ export class ConsultantListService {
   getAllConstultant(): Consultant[]{
     return this.consultList;
   }
+  addConsultant(name: string, firstLastname: string, secondLastname: string, email: string, what: number, rol: string, xpYears: number){
+    let consult: Consultant;
+    consult = {
+      name: name,
+      firstLastname: firstLastname,
+      secondLastname: secondLastname, 
+      email: email, 
+      what: what,
+      rol: rol, 
+      xpYears: xpYears
+    };
+    this.consultList.push(consult);
+  }
 }

@@ -17,35 +17,34 @@
                        <!-----Contenido aqui------->
                        <form action="" class="form-control form-control-sm shadow-sm">
                             <div class="form-floating mb-3">
-                                <input type="text" class="form-control form-control-sm shadow-sm" id="nameConsult" placeholder="Nombre" >
+                                <input type="text" class="form-control form-control-sm shadow-sm" #nameConsult placeholder="Nombre" >
                                 <label for="nameConsult">Nombre</label>
                             </div>
                             <div class="form-floating mb-3">
-                                <input type="text" class="form-control form-control-sm shadow-sm" id="nameConsult" placeholder="Nombre" >
+                                <input type="text" class="form-control form-control-sm shadow-sm" #firstSurname placeholder="Nombre" >
                                 <label for="nameConsult">Primer apellido</label>
                             </div>
                             <div class="form-floating mb-3">
-                                <input type="text" class="form-control form-control-sm shadow-sm" id="nameConsult" placeholder="Nombre" >
+                                <input type="text" class="form-control form-control-sm shadow-sm" #lastSurname placeholder="Nombre" >
                                 <label for="nameConsult">Segundo apellido</label>
                             </div>
                             <div class="form-floating mb-3">
-                                <input type="text" class="form-control form-control-sm shadow-sm" id="nameConsult" placeholder="Nombre" >
+                                <input type="text" class="form-control form-control-sm shadow-sm" #email placeholder="Nombre" >
                                 <label for="nameConsult">Correo institucional</label>
                             </div>
                             <div class="form-floating mb-3">
-                                <input type="text" class="form-control form-control-sm shadow-sm" id="nameConsult" placeholder="Nombre" >
+                                <input type="number" class="form-control form-control-sm shadow-sm" #whap placeholder="Nombre" >
                                 <label for="nameConsult">WhatsApp</label>
                             </div>
                             <div class="form-floating mb-3">
-                                <input type="text" class="form-control form-control-sm shadow-sm" id="nameConsult" placeholder="Nombre" >
+                                <input type="text" class="form-control form-control-sm shadow-sm" #rol placeholder="Nombre" >
                                 <label for="nameConsult">Cargo en la universidad</label>
                             </div>
                             <div class="form-floating mb-3">
-                                <input type="text" class="form-control form-control-sm shadow-sm" id="nameConsult" placeholder="Nombre" >
+                                <input type="number" class="form-control form-control-sm shadow-sm" #xpYears placeholder="Nombre" >
                                 <label for="nameConsult">Años de experiencia</label>
                             </div>
-                            <button class="w-100 btn btn-lg btn-primary shadow" type="submit" style="background-color: #3b71ca;">Añadir consultor</button>
-
+                            <button class="w-100 btn btn-lg btn-primary shadow" type="submit" style="background-color: #3b71ca;"(click)="addCons(nameConsult.value, firstSurname.value, lastSurname.value, email.value, 123, rol.value, 6)">Añadir consultor</button>
                        </form>
                       
    
