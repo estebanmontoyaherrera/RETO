@@ -14,12 +14,49 @@
                          </nav>
                    </div>
                    <div class="row">
-                       <!-----Contenido aqui------->
-                      
-   
-   
-                   </div>
+                    <div class="col-12 text-center mb-4">
+                        <h2 style="font-family: 'Roboto', sans-serif; font-weight: 700; color: #2c3e50;">📚 Solicitud de Asesoría</h2>
+                        <p style="font-family: 'Roboto', sans-serif; color: #7f8c8d;">Completa los datos a continuación para solicitar ayuda con la estrategia de diagnóstico.</p>
+                    </div>
                 
+                    <form action="" class="form-control form-control-sm shadow-lg p-4 rounded" style="background-color: #f4f6f7; border: 1px solid #dcdde1;">
+                        
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control form-control-sm shadow-sm" #name placeholder="Nombre completo">
+                            <label for="name" style="color: #2c3e50;">Nombre completo</label>
+                        </div>
+                
+                       
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control form-control-sm shadow-sm" #email placeholder="Correo electrónico">
+                            <label for="email" style="color: #2c3e50;">Correo electrónico</label>
+                        </div>
+                
+                        
+                        <div class="form-floating mb-3">
+                            <select class="form-select shadow-sm" #contactMethod style="background-color: white;">
+                                <option value="email">Correo electrónico</option>
+                                <option value="phone">Teléfono</option>
+                                <option value="whatsapp">WhatsApp</option>
+                            </select>
+                            <label for="contactMethod" style="color: #2c3e50;">Forma de contacto preferida</label>
+                        </div>
+                
+                        
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control form-control-sm shadow-sm" #contactNumber placeholder="Número de contacto (opcional)">
+                            <label for="contactNumber" style="color: #2c3e50;">Número de contacto </label>
+                        </div>
+                
+                       
+                        <div class="form-floating mb-3">
+                            <textarea class="form-control form-control-sm shadow-sm" #helpQuestion placeholder="Describe en qué necesitas ayuda" style="height: 120px; resize: none;"></textarea>
+                            <label for="helpQuestion" style="color: #2c3e50;">Describe en qué necesitas ayuda</label>
+                        </div>
+                
+                        <button class="w-100 btn btn-lg shadow-lg" type="button" style="background-color: #2980b9; color: white; font-weight: 700;">Enviar Solicitud</button>
+                    </form>
+                </div>
                </div>
            </main>
            

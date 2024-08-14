@@ -17,14 +17,100 @@
                       </nav>
                    </div>
                    <div class="row">
-                       <!-----Contenido aqui------->
-                      
-   
-   
-                   </div>
+                    <div class="col-12 text-center mb-4">
+                        <h2 style="font-family: 'Roboto', sans-serif; font-weight: 700; color: #2c3e50;">📋 Registro de Usuario</h2>
+                        <p style="font-family: 'Roboto', sans-serif; color: #7f8c8d;">Completa los datos a continuación para añadir un nuevo usuario.</p>
+                    </div>
                 
-               </div>
-           </main>
+                    <div class="col-12">
+                        <form (submit)="onSubmit($event)" class="form-control form-control-sm shadow-lg p-4 rounded" style="background-color: #f4f6f7; border: 1px solid #dcdde1; width: 100%;">
+                            <!-- Tipo de persona -->
+                            <div class="form-floating mb-3">
+                                <select class="form-select form-select-sm shadow-sm" id="floatingSelect" aria-label="Tipo de persona" (change)="onPersonTypeChange($event)">
+                                    <option selected hidden>Selecciona un tipo</option>
+                                    <option value="Natural">Natural</option>
+                                    <option value="Jurídica">Jurídica</option>
+                                </select>
+                                <label for="floatingSelect" style="color: #2c3e50;">Tipo de Persona</label>
+                            </div>
+                
+                            <!-- Nit o Documento -->
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control form-control-sm shadow-sm" id="floatingDocument" placeholder="Nit o Documento">
+                                <label for="floatingDocument" style="color: #2c3e50;">Nit o Documento</label>
+                            </div>
+                
+                            <!-- Nombre o Razón Social -->
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control form-control-sm shadow-sm" id="floatingLegalName" placeholder="Nombre o Razón Social">
+                                <label for="floatingLegalName" style="color: #2c3e50;">Nombre o Razón Social</label>
+                            </div>
+                
+                            <!-- Tipo de Empresa -->
+                            <div class="form-floating mb-3" [hidden]="personType !== 'Jurídica'">
+                                <select class="form-select form-select-sm shadow-sm" id="floatingCompanyType" aria-label="Tipo de empresa">
+                                    <option selected hidden>Selecciona un tipo</option>
+                                    <option value="1">Pequeña</option>
+                                    <option value="2">Mediana</option>
+                                    <option value="3">Grande</option>
+                                    <option value="4">Gran Empresa</option>
+                                </select>
+                                <label for="floatingCompanyType" style="color: #2c3e50;">Tipo de Empresa</label>
+                            </div>
+                
+                            <!-- Sector económico -->
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control form-control-sm shadow-sm" id="floatingSector" list="sectorOptions" aria-label="Sector económico" placeholder="Sector económico">
+                                <datalist id="sectorOptions">
+                                    <option value="Agricultura"></option>
+                                    <option value="Ganadería"></option>
+                                    <option value="Pesca"></option>
+                                    <option value="Minería"></option>
+                                    <option value="Silvicultura"></option>
+                                    <option value="Industria"></option>
+                                    <option value="Construcción"></option>
+                                    <option value="Energía"></option>
+                                    <option value="Textiles"></option>
+                                    <option value="Comercio"></option>
+                                    <option value="Turismo"></option>
+                                    <option value="Servicios Financieros"></option>
+                                    <option value="Educación"></option>
+                                    <option value="Salud"></option>
+                                    <option value="Transporte"></option>
+                                    <option value="Tecnología de la Información"></option>
+                                    <option value="Servicios Públicos"></option>
+                                    <option value="Medios de Comunicación"></option>
+                                    <option value="Servicios Profesionales"></option>
+                                </datalist>
+                                <label for="floatingSector" style="color: #2c3e50;">Sector Económico</label>
+                            </div>
+                
+                            <!-- Email -->
+                            <div class="form-floating mb-3">
+                                <input type="email" class="form-control form-control-sm shadow-sm" id="floatingEmail" placeholder="name@example.com">
+                                <label for="floatingEmail" style="color: #2c3e50;">Email</label>
+                            </div>
+                
+                            <!-- Contraseña -->
+                            <div class="form-floating mb-3">
+                                <input type="password" class="form-control form-control-sm shadow-sm" id="floatingPassword" placeholder="Contraseña">
+                                <label for="floatingPassword" style="color: #2c3e50;">Contraseña</label>
+                            </div>
+                
+                            <!-- Repetir Contraseña -->
+                            <div class="form-floating mb-3">
+                                <input type="password" class="form-control form-control-sm shadow-sm" id="floatingRepeatPassword" placeholder="Repetir Contraseña">
+                                <label for="floatingRepeatPassword" style="color: #2c3e50;">Repetir Contraseña</label>
+                            </div>
+                
+                            <!-- Botón de envío -->
+                            <button class="w-100 btn btn-lg shadow-lg" type="submit" style="background-color: #2980b9; color: white; font-weight: 700;">Añadir Usuario</button>
+                        </form>
+                    </div>
+                </div>
+                
+              </div>
+            </main>
            
            <app-adminfooter></app-adminfooter>
        </div>

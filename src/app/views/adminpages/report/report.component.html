@@ -14,11 +14,52 @@
                          </nav>
                    </div>
                    <div class="row">
-                       <!-----Contenido aqui------->
+                    <div class="col-12 text-center mb-4">
+                        <h2 style="font-family: 'Roboto', sans-serif; font-weight: 700; color: #34495e;">📊 Generar Reporte</h2>
+                        <p style="font-family: 'Roboto', sans-serif; color: #7f8c8d;">Ingrese los detalles para generar un reporte en el panel de administración.</p>
+                    </div>
+                
+                    <form action="" class="form-control form-control-sm shadow-lg p-4 rounded" style="background-color: #ecf0f1; border: 1px solid #bdc3c7;">
                       
-   
-   
-                   </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control form-control-sm shadow-sm" #adminReportName placeholder="Nombre del reporte">
+                            <label for="adminReportName" style="color: #34495e;">Nombre del reporte</label>
+                        </div>
+                
+                        
+                        <div class="form-floating mb-3">
+                            <select class="form-select shadow-sm" #adminReportType style="background-color: white;">
+                                <option value="user_activity">Actividad de Usuario</option>
+                                <option value="system_logs">Logs del Sistema</option>
+                                <option value="financial_overview">Visión Financiera</option>
+                                <option value="data_summary">Resumen de Datos</option>
+                                <option value="custom">Personalizado</option>
+                            </select>
+                            <label for="adminReportType" style="color: #34495e;">Tipo de reporte</label>
+                        </div>
+                
+                        
+                        <div class="form-floating mb-3">
+                            <input type="date" class="form-control form-control-sm shadow-sm" #adminStartDate placeholder="Fecha de inicio">
+                            <label for="adminStartDate" style="color: #34495e;">Fecha de inicio</label>
+                        </div>
+                
+                        
+                        <div class="form-floating mb-3">
+                            <input type="date" class="form-control form-control-sm shadow-sm" #adminEndDate placeholder="Fecha de finalización">
+                            <label for="adminEndDate" style="color: #34495e;">Fecha de finalización</label>
+                        </div>
+                
+                        
+                        <div class="form-floating mb-3">
+                            <textarea class="form-control form-control-sm shadow-sm" #adminReportDescription placeholder="Descripción del reporte" style="height: 120px; resize: none;"></textarea>
+                            <label for="adminReportDescription" style="color: #34495e;">Descripción del reporte</label>
+                        </div>
+                
+                        
+                        <button class="w-100 btn btn-lg shadow-lg" type="button" style="background-color: #2980b9; color: white; font-weight: 700;">Generar Reporte</button>
+                    </form>
+                </div>
                 
                </div>
            </main>
