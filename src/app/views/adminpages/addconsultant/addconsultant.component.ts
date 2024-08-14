@@ -13,7 +13,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './addconsultant.component.css'
 })
 export class AddconsultantComponent {
-  //inyectar servicio. Pasar objeto con los datos del form.
+  
   consultService: ConsultantListService = inject(ConsultantListService);
   addCons(namep: string, firstLasname: string, secondLastname: string, email: string, what: number, rol: string, xpYears: number){
     this.consultService.addConsultant(namep, firstLasname, secondLastname, email, what, rol, xpYears);
