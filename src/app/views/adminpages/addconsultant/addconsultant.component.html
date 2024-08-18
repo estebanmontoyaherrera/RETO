@@ -44,7 +44,7 @@
                                 <input type="number" class="form-control form-control-sm shadow-sm" #xpYears placeholder="Nombre" >
                                 <label for="nameConsult">Años de experiencia</label>
                             </div>
-                            <button class="w-100 btn btn-lg btn-primary shadow" type="button" style="background-color: #3b71ca;"(click)="addCons(nameConsult.value, firstSurname.value, lastSurname.value, email.value, 123, rol.value, 123)">Añadir consultor</button>
+                            <button (click)="info()" id="btn_confirm" class="w-100 btn btn-lg btn-primary shadow" type="button" style="background-color: #3b71ca;" (click)="addCons(nameConsult.value, firstSurname.value, lastSurname.value, email.value, 123, rol.value, 123)">Añadir consultor</button>
                        </form>
                       
    
