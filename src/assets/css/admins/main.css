@@ -79,3 +79,13 @@ h4 {
     height: 600px;
     overflow-x: auto;
 }
+.consultores{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
