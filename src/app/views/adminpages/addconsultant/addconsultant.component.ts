@@ -16,8 +16,9 @@ import { CommonModule } from '@angular/common';
 export class AddconsultantComponent {
   
   consultService: ConsultantListService = inject(ConsultantListService);
-  addCons(namep: string, firstLasname: string, secondLastname: string, email: string, what: number, rol: string, xpYears: number){
-    this.consultService.addConsultant(namep, firstLasname, secondLastname, email, what, rol, xpYears);
+  addCons(namep: string, firstLasname: string, secondLastname: string, email: string, what: string, rol: string, xpYears: string){
+    
+    this.consultService.addConsultant(namep, firstLasname, secondLastname, email, parseInt(what), rol, parseInt(xpYears));
   };
   info(){
     alert("se registró el consulto");
