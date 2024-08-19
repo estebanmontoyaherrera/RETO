@@ -14,11 +14,37 @@
                          </nav>
                    </div>
                    <div class="row">
-                       <!-----Contenido aqui------->
-                      
-   
-   
-                   </div>
+                    <div class="col-12 text-center mb-4">
+                        <h2 style="font-family: 'Roboto', sans-serif; font-weight: 700; color: #2c3e50;">➕ Agregar Pregunta al Formulario de Diagnóstico</h2>
+                        <p style="font-family: 'Roboto', sans-serif; color: #7f8c8d;">Completa los campos a continuación para añadir una nueva pregunta al formulario de diagnóstico.</p>
+                    </div>
+                
+                    <form action="" class="form-control form-control-sm shadow-lg p-4 rounded" style="background-color: #f4f6f7; border: 1px solid #dcdde1;">
+                        
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control form-control-sm shadow-sm" #questionTitle placeholder="Título de la Pregunta">
+                            <label for="questionTitle" style="color: #2c3e50;">Título de la Pregunta</label>
+                        </div>
+                
+                        <div class="form-floating mb-3">
+                            <textarea class="form-control form-control-sm shadow-sm" #questionDescription placeholder="Descripción de la Pregunta" style="height: 100px; resize: none;"></textarea>
+                            <label for="questionDescription" style="color: #2c3e50;">Descripción de la Pregunta (Opcional)</label>
+                        </div>
+                
+                        <div class="form-floating mb-3">
+                            <select class="form-select shadow-sm" #questionType style="background-color: white;">
+                                <option value="text">Texto</option>
+                                <option value="textarea">Texto Largo</option>
+                                <option value="select">Selección Múltiple</option>
+                                <option value="radio">Opción Única</option>
+                            </select>
+                            <label for="questionType" style="color: #2c3e50;">Tipo de Respuesta</label>
+                        </div>
+                
+                        <button class="w-100 btn btn-lg shadow-lg" type="button" style="background-color: #2980b9; color: white; font-weight: 700;">Agregar Pregunta</button>
+                    </form>
+                </div>
+                
                 
                </div>
            </main>
